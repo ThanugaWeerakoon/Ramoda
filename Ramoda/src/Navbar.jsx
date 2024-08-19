@@ -1,11 +1,9 @@
 import React from 'react';
 
-
-
 const Navbar = () => {
   return (
     <nav className="bg-black text-white p-5">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="mx-auto flex justify-between items-center px-6">
 
         <div className="text-3xl font-bold ">
         RA-MÓDA
