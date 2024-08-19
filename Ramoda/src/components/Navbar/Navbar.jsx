@@ -4,14 +4,17 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="bg-black text-white p-4 ">
+    <nav className="bg-black text-white p-5">
       <div className="container mx-auto flex justify-between items-center">
-        
-        <div className="flex space-x-4">
-          <a href="/" className="hover:text-gray-400">Home</a>
-          <a href="/men" className="hover:text-gray-400">Men</a>
-          <a href="/women" className="hover:text-gray-400">Women</a>
-          <a href="/about-us" className="hover:text-gray-400">About Us</a>
+
+        <div className="text-3xl font-bold ">
+        RA-MÓDA
+        </div>      
+        <div className="flex space-x-12 text-lg font-mono font-bold">
+          <a href="/" className="hover:text-gray-400">HOME</a>
+          <a href="/men" className="hover:text-gray-400">MEN</a>
+          <a href="/women" className="hover:text-gray-400">WOMEN</a>
+          <a href="/about-us" className="hover:text-gray-400">ABOUT US</a>
         </div>
       </div>
     </nav>
