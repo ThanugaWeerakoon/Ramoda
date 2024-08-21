@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
+import './index.css'; 
 
-export const Aboutus = () => {
+const Aboutus = () => {
   return (
-    <div>Aboutus</div>
-  )
-}
+    <div className="content-container">
+      About Us Page Content
+    </div>
+  );
+};
+
+export default Aboutus;
