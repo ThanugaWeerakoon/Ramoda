@@ -40,7 +40,7 @@ const Shop = () => {
       </div>
 
       <div className="text-center mt-10 mb-4">
-        <h1 className="text-3xl font-bold">LIYO FASHION</h1>
+        <h1 className="text-3xl font-bold">RA-MÓDA</h1>
         <p>MODERN FASHION FROM US TO YOU</p>
       </div>
     </section>
