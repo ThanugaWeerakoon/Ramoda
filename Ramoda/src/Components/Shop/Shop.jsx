@@ -36,7 +36,7 @@ const Shop = () => {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-cover rounded-t-lg"
+                className="w-full h-full object-cover rounded-t-lg transform transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </div>

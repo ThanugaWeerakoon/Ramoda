@@ -55,14 +55,14 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
         {productsData.map((product) => (
           <div key={product.id} className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col">
-            <div className="w-full h-88 overflow-hidden">
+            <div className="w-full h-88 overflow-hidden relative ">
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-cover rounded-t-lg"
+                className="w-full h-full object-cover rounded-t-lg transform transition-transform duration-300 hover:scale-105 "
                 loading="lazy"
               />
             </div>
