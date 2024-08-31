@@ -17,12 +17,12 @@ const Navbar = () => {
         </div>
 
        
-        <div className="flex-1 flex justify-center md:justify-start">
+        <div className=" flex-1 flex justify-center md:justify-start">
           <ul className="flex  md:space-x-7">
             <li className="relative">
               <Link
                 to="/"
-                className="uppercase text-white transition duration-300 ease-in-out hover:text-red-500"
+                className="uppercase text-white transition duration-300 ease-in-out hover:text-gray-500"
               >
                 Home
               </Link>
@@ -30,18 +30,18 @@ const Navbar = () => {
             <li className="relative">
               <Link
                 to="/shop"
-                className="uppercase text-white transition duration-300 ease-in-out hover:text-red-500"
+                className="uppercase text-white transition duration-300 ease-in-out hover:text-gray-500"
               >
                 Shop
               </Link>
             </li>
             <li className="relative">
-              <span className="uppercase text-white transition duration-300 ease-in-out hover:text-red-500 cursor-pointer">
+              <span className="uppercase text-white transition duration-300 ease-in-out hover:text-gray-500 cursor-pointer">
                 Categories
               </span>
             </li>
             <li className="relative">
-              <span className="uppercase text-white transition duration-300 ease-in-out hover:text-red-500 cursor-pointer">
+              <span className="uppercase text-white transition duration-300 ease-in-out hover:text-gray-500 cursor-pointer">
                 Contact
               </span>
             </li>
