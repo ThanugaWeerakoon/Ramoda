@@ -1,25 +1,29 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Navbar';
-import Home from './Home';
-import Aboutus from './Aboutus'; 
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from './Components/NavBar/Navbar';
+import Home from './Components/Home/Home';
+import Cart from './Components/Cart/Cart';
+import Shop from './Components/Shop/Shop';
+import { CartProvider } from './Components/Context/CartContext';
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen"> 
-        <Navbar /> 
-        <div className="flex-grow"> 
-          <Routes>
-            <Route path="/" element={<Home />} /> 
-            <Route path="/aboutus" element={<Aboutus />} /> 
-          </Routes>
+    <BrowserRouter>
+      <CartProvider>
+        <div className='min-h-screen flex flex-col'>
+          <Navbar />
+          <div className='flex-grow'>
+            <Routes>
+            
+              <Route path="/" element={<Home />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/shop" element={<Shop />} />
+            </Routes>
+          </div>
         </div>
-      </div>
-    </Router>
+      </CartProvider>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
