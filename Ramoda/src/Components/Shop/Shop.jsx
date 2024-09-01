@@ -13,7 +13,7 @@ const Shop = () => {
 
   return (
     <section className="min-h-screen">
-      {/* Shop Image Section */}
+      
       <img
         src={shoppic}
         className="w-full object-cover mb-4 sm:mb-8"
