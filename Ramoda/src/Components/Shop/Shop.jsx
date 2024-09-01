@@ -6,7 +6,7 @@ import Footer from '../../Components/Footer/Footer';
 
 const Shop = () => {
   const { addToCart } = useContext(CartContext);
-  const [selectedSize, setSelectedSize] = useState({}); 
+  const [selectedSize, setSelectedSize] = useState({});
 
   const handleSizeChange = (productId, size) => {
     setSelectedSize((prev) => ({ ...prev, [productId]: size }));
@@ -41,46 +41,47 @@ const Shop = () => {
         </p>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {regularProducts.map((product) => (
           <div
             key={product.id}
-            className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col"
+            className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300"
           >
-            <div className="overflow-hidden relative">
+            <div className="relative overflow-hidden">
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-cover rounded-t-lg transform transition-transform duration-300 hover:scale-110"
-                loading="lazy"
+                className="w-full h-94 object-cover transform transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <div className="p-4 flex flex-col flex-grow">
-              <h2 className="text-xl font-bold mb-2">{product.name}</h2>
-              <p className="text-gray-700 mb-2">{product.price}</p>
-              
+            <div className="p-6 flex flex-col flex-grow items-center text-center">
+              <h3 className="text-2xl font-semibold mb-2 text-black">{product.name}</h3>
+              <p className="text-gray-700 mb-4">{product.price}</p>
               <div className="mb-4">
                 <label className="block text-sm font-medium mb-2">Size</label>
-                <select
-                  value={selectedSize[product.id] || ''}
-                  onChange={(e) => handleSizeChange(product.id, e.target.value)}
-                  className="w-full p-2 border border-gray-300 rounded-md"
-                >
-                  <option value="" disabled>Select size</option>
-                  <option value="S">S</option>
-                  <option value="M">M</option>
-                  <option value="L">L</option>
-                  <option value="XL">XL</option>
-                </select>
+                <div className="flex space-x-2 justify-center">
+                  {['S', 'M', 'L', 'XL'].map((size) => (
+                    <button
+                      key={size}
+                      type="button"
+                      className={`px-4 py-2 rounded-full border ${
+                        selectedSize[product.id] === size
+                          ? 'bg-black text-white'
+                          : 'bg-white text-black border-gray-300'
+                      } hover:bg-black hover:text-white transition duration-300`}
+                      onClick={() => handleSizeChange(product.id, size)}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
               </div>
-              <div className="flex justify-center mt-auto">
-                <button
-                  onClick={() => handleAddToCart(product.id)}
-                  className="bg-black hover:bg-white text-white hover:text-black py-2 px-4 rounded-full transition duration-300 ease-in-out"
-                >
-                  Add to Cart
-                </button>
-              </div>
+              <button
+                onClick={() => handleAddToCart(product.id)}
+                className="bg-black text-white py-2 px-6 w-full max-w-[200px] rounded-full hover:bg-white hover:text-black transition duration-300 ease-in-out mt-auto"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         ))}
@@ -90,7 +91,7 @@ const Shop = () => {
         <h1 className="text-3xl font-bold">RA-MÓDA</h1>
         <p>MODERN FASHION FROM US TO YOU</p>
       </div>
-      <Footer/>
+      <Footer />
     </section>
   );
 };
