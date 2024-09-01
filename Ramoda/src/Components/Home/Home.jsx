@@ -17,7 +17,7 @@ const Home = () => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Slower rotation for better viewing experience
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, [images.length]);
