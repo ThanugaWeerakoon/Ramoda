@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../Context/CartContext';
 import cartIcon from '../../assets/cart.png';
@@ -6,6 +6,20 @@ import cartIcon from '../../assets/cart.png';
 const Navbar = () => {
   const { cartItems } = useContext(CartContext);
   const cartItemsCount = cartItems.length;
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [dropdownTimeout, setDropdownTimeout] = useState(null);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(true);
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+  };
+
+  const closeDropdown = () => {
+    setDropdownTimeout(setTimeout(() => setIsDropdownOpen(false), 300)); // Adjust delay as needed
+  };
 
   return (
     <nav className="bg-black shadow-md fixed top-0 left-0 w-full z-50 py-5">
@@ -16,9 +30,8 @@ const Navbar = () => {
           </Link>
         </div>
 
-       
-        <div className=" flex-1 flex justify-center md:justify-start">
-          <ul className="flex  md:space-x-7">
+        <div className="flex-1 flex justify-center md:justify-start">
+          <ul className="flex md:space-x-7">
             <li className="relative">
               <Link
                 to="/"
@@ -35,22 +48,36 @@ const Navbar = () => {
                 Shop
               </Link>
             </li>
-            <li className="relative">
+            <li
+              className="relative"
+              onMouseEnter={toggleDropdown}
+              onMouseLeave={closeDropdown}
+            >
               <span className="uppercase text-white transition duration-300 ease-in-out hover:text-gray-500 cursor-pointer">
                 Categories
               </span>
+              {isDropdownOpen && (
+                <ul className="absolute top-full left-0 mt-1 bg-black text-white shadow-lg py-2 rounded">
+                  <li className="px-4 py-2 hover:bg-gray-700">
+                    <Link to="/categories/men">Men</Link>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-700">
+                    <Link to="/categories/women">Women</Link>
+                  </li>
+                </ul>
+              )}
             </li>
             <li className="relative">
-              <Link 
-              to = "/contact"
-               className="uppercase text-white transition duration-300 ease-in-out hover:text-gray-500 cursor-pointer">
+              <Link
+                to="/contact"
+                className="uppercase text-white transition duration-300 ease-in-out hover:text-gray-500 cursor-pointer"
+              >
                 Contact
               </Link>
             </li>
           </ul>
         </div>
 
-        
         <div className="flex items-center ml-4 md:ml-6">
           <Link to="/cart" className="relative flex items-right px-5">
             <img src={cartIcon} alt="Cart" className="h-7 md:h-7" />
