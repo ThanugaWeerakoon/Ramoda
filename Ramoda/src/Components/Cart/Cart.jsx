@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import cartpic from '../../assets/carthome.jpg';
 import { CartContext } from '../Context/CartContext';
+import Footer from '../../Components/Footer/Footer';
 
 function Cart() {
   const { cartItems, removeItemFromCart } = useContext(CartContext);
@@ -10,7 +11,7 @@ function Cart() {
   };
 
   return (
-    <section className="p-6 min-h-screen">
+    <section className=" min-h-screen">
       <img src={cartpic} className="w-full object-cover mb-4 sm:mb-8 rounded-lg shadow-md" alt="Cart" />
 
       <div className="overflow-x-auto">
@@ -53,6 +54,7 @@ function Cart() {
         <h1 className="text-3xl font-bold text-black text-center">RA-MÓDA</h1>
         <p className="text-gray-600 text-center mt-2">MODERN FASHION FROM US TO YOU</p>
       </div>
+      <Footer/>
     </section>
   );
 }
