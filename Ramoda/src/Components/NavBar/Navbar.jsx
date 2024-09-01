@@ -55,7 +55,7 @@ const Navbar = () => {
           <Link to="/cart" className="relative flex items-right px-5">
             <img src={cartIcon} alt="Cart" className="h-7 md:h-7" />
             {cartItemsCount > 0 && (
-              <div className="absolute top-0 right-0 bg-black text-white text-xs px-2 py-1 rounded-full">
+              <div className="absolute top-0 right-0 bg-red-900 text-white text-xs px-2 py-0 rounded-full">
                 {cartItemsCount}
               </div>
             )}

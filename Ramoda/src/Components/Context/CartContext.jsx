@@ -1,18 +1,20 @@
 
 import { createContext, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import products from '../../product';
+import productsData from '../../shop'; 
 
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
-  const [productList] = useState(products);
-
-  const addToCart = (productId) => {
-    const productToAdd = productList.find((product) => product.id === productId);
+  
+  const addToCart = (productId, size) => {
+    const productToAdd = productsData.find((product) => product.id === productId);
     if (productToAdd) {
-      setCartItems((prevCartItems) => [...prevCartItems, { ...productToAdd, uuid: uuidv4() }]);
+      setCartItems((prevCartItems) => [
+        ...prevCartItems,
+        { ...productToAdd, uuid: uuidv4(), size }
+      ]);
     }
   };
 
@@ -25,7 +27,7 @@ const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, getCartItems, removeItemFromCart, productList }}>
+    <CartContext.Provider value={{ cartItems, addToCart, getCartItems, removeItemFromCart }}>
       {children}
     </CartContext.Provider>
   );
