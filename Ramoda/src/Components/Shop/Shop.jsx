@@ -2,6 +2,8 @@ import React, { useState, useContext } from 'react';
 import shoppic from '../../assets/Shop.jpg';
 import { CartContext } from '../Context/CartContext';
 import productsData from '../../shop'; 
+import Footer from '../../Components/Footer/Footer';
+
 const Shop = () => {
   const { addToCart } = useContext(CartContext);
   const [selectedSize, setSelectedSize] = useState({}); 
@@ -88,6 +90,7 @@ const Shop = () => {
         <h1 className="text-3xl font-bold">RA-MÓDA</h1>
         <p>MODERN FASHION FROM US TO YOU</p>
       </div>
+      <Footer/>
     </section>
   );
 };

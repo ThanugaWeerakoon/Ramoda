@@ -4,6 +4,7 @@ import productsData from '../../shop';
 import homePic1 from '../../assets/Home.JPG';
 import homePic2 from '../../assets/Home2.JPG';
 import homePic3 from '../../assets/Home3.JPG';
+import Footer from '../../Components/Footer/Footer';
 
 const Home = () => {
   const { addToCart } = useContext(CartContext);
@@ -114,6 +115,7 @@ const Home = () => {
         <h1 className="text-3xl font-bold">RA-MÓDA</h1>
         <p>WE PROMISE WE COMFORT</p>
       </div>
+      <Footer/>
     </div>
   );
 };

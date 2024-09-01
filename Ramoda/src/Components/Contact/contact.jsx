@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../Components/Footer/Footer';
 
 const Contact = () => {
   return (
@@ -115,51 +116,8 @@ const Contact = () => {
       We promise we comfort
       </h1>
 
-
-      <footer class="bg-gray-900 text-white py-10 text-center">
-        <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-around">
-            <div class="w-48 mb-6">
-                <h3 class="text-lg font-semibold mb-4">ABOUT</h3>
-                <p>RA-MÓDA .</p>
-            </div>
-            <div class="w-48 mb-6">
-                <h3 class="text-lg font-semibold mb-4">CONTACT US</h3>
-                <ul class="space-y-2">
-                    <li>📞 +94 741 676 595</li>
-                    <li>📧 hello@pepperstreet.co</li>
-                </ul>
-            </div>
-            
-            <div class="w-48 mb-6">
-                <h3 class="text-lg font-semibold mb-4">COLLECTIONS</h3>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:underline">Men</a></li>
-                    <li><a href="#" class="hover:underline">Women</a></li>
-                    <li><a href="#" class="hover:underline">Accessories</a></li>
-                </ul>
-            </div>
-            <div class="w-full max-w-sm bg-gray-800 p-6 rounded-lg mb-6">
-                <h3 class="text-lg font-semibold mb-4">Join Our Community</h3>
-                <p class="mb-4">Be the first to know about new arrivals, sales, and promotions by subscribing to our newsletter today!</p>
-                <form action="#" class="flex flex-col sm:flex-row">
-                    <input type="email" placeholder="Enter your email address" class="px-4 py-2 mb-2 sm:mb-0 sm:mr-2 flex-grow rounded-md border-none"/>
-                    <button type="submit" class="px-4 py-2 bg-gray-700 rounded-md hover:bg-gray-600">SUBSCRIBE</button>
-                </form>
-            </div>
-        </div>
-        <div class="mt-6">
-            <p class="text-sm">© RA-MÓDA. - Powered by RA-MÓDA</p>
-        </div>
-    </footer>
-
-      
-
-      
-
-
-
-
-
+      <Footer/>
+         
     </div>
   );
 };
