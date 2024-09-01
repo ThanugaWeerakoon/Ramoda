@@ -39,7 +39,7 @@ const Home = () => {
   const latestProducts = productsData.filter(product => product.isLatest);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <div className="relative w-full h-[160vh] overflow-hidden">
         {images.map((image, index) => (
           <div
@@ -59,13 +59,13 @@ const Home = () => {
       </div>
 
       <div className="mx-auto text-center mb-8 py-8">
-        <h1 className="text-5xl font-bold">Latest Arrivals</h1>
-        <p className="text-gray-600 text-lg mt-2">
+        <h1 className="text-5xl font-bold text-black">Latest Arrivals</h1>
+        <p className="text-black text-lg mt-2">
           STAY AHEAD OF THE CURVE WITH OUR LATEST ARRIVALS
         </p>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
         {latestProducts.map((product) => (
           <div
             key={product.id}
