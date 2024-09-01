@@ -4,60 +4,63 @@ import Footer from '../../Components/Footer/Footer';
 const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col justify-between">
-      <div className="flex-grow py-20 bg-gray-200 px-6 lg:px-24">
+      <div className="flex-grow py-40  bg-gray-200 px-6 lg:px-24">
         <h2 className="text-3xl font-semibold text-center text-black-800 mb-8">
           Get in Touch
         </h2>
-        <p className="text-center text-black-600 mb-12">
+        <p className="text-center text-black-600 mb-12 mt-20">
           We'd love to hear from you! Whether you have a question about our products or just want to chat, feel free to reach out.
         </p>
 
-        <div className="max-w-6xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
-          <h1 className="text-3xl font-semibold text-center text-black-800 mt-12 mb-12">
+        <div className="max-w-[80rem] mt-20 mx-auto bg-[#212121] p-8 rounded-[20px] shadow-lg">
+          <h1 className="text-3xl font-semibold text-center text-white mt-10 mb-12">
             Contact Form
           </h1>
 
           <form>
             <div className="mb-4 flex flex-wrap gap-4 justify-center">
-              <div className="flex-1 min-w-[200px]">
-                <label className="block text-black-700 text-sm font-bold mb-2" htmlFor="name">
+              <div className="flex-1 min-w-[250px] max-w-[300px]">
+                <label className="block text-white text-sm font-bold mb-2 text-left" htmlFor="name">
                   Name
                 </label>
-                <input 
-                  className="shadow appearance-none border rounded-lg w-full py-3 px-3 text-black-700 text-sm leading-tight focus:outline-none focus:shadow-outline" 
-                  id="name" 
-                  type="text" 
-                  placeholder="Your name" 
+                <input
+                  className="shadow appearance-none bg-[#3d3d3d] rounded-[10px] w-full py-2 px-3 text-white text-sm leading-tight focus:outline-none focus:shadow-outline hover:bg-[#4d4d4d] hover:border-[#aaaaaa]"
+                  id="name"
+                  type="text"
+                  placeholder="Your name"
                 />
               </div>
-              <div className="flex-1 min-w-[200px]">
-                <label className="block text-black-700 text-sm font-bold mb-2" htmlFor="email">
+              <div className="flex-1 min-w-[250px] max-w-[300px]">
+                <label className="block text-white text-sm font-bold mb-2 text-left" htmlFor="email">
                   Email
                 </label>
-                <input 
-                  className="shadow appearance-none border rounded-lg w-full py-3 px-3 text-black-700 text-sm leading-tight focus:outline-none focus:shadow-outline" 
-                  id="email" 
-                  type="email" 
-                  placeholder="Your email" 
+                <input
+                  className="shadow appearance-none bg-[#3d3d3d] rounded-[10px] w-full py-2 px-3 text-white text-sm leading-tight focus:outline-none focus:shadow-outline hover:bg-[#4d4d4d] hover:border-[#aaaaaa]"
+                  id="email"
+                  type="email"
+                  placeholder="Your email"
                 />
               </div>
             </div>
+            <br />
 
-            <div className="mb-6">
-              <label className="block text-black-700 text-sm font-bold mb-2" htmlFor="message">
-                Message
-              </label>
-              <textarea 
-                className="shadow appearance-none border rounded-lg w-full py-3 px-3 text-black-700 text-sm leading-tight focus:outline-none focus:shadow-outline" 
-                id="message" 
-                rows="5" 
-                placeholder="Your message"
-              ></textarea>
+            <div className="mb-6 flex justify-center">
+              <div className="w-full max-w-[650px]">
+                <label className="block text-white text-sm font-bold mb-2 text-left" htmlFor="message">
+                  Message
+                </label>
+                <textarea
+                  className="shadow appearance-none bg-[#3d3d3d] rounded-[10px] w-full py-2 px-3 text-white text-sm leading-tight focus:outline-none focus:shadow-outline hover:bg-[#4d4d4d] hover:border-[#aaaaaa]"
+                  id="message"
+                  rows="5"
+                  placeholder="Your message"
+                ></textarea>
+              </div>
             </div>
 
             <div className="flex items-center justify-center">
-              <button 
-                className="bg-black hover:bg-gray-700 text-white rounded-lg font-bold py-2 px-4 focus:outline-none focus:shadow-outline" 
+              <button
+                className="bg-white mb-10 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-xl group text-[#3d3d3d] rounded-[10px] font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
                 type="submit"
               >
                 Send Message
@@ -66,13 +69,13 @@ const Contact = () => {
           </form>
         </div>
 
-        <div className="text-center text-black-600 mt-12">
+        <div className="text-center text-black-600 mt-20">
           <p>Or reach us at:</p>
           <p className="font-semibold">ramoda@gmail.com</p>
           <p className="font-semibold">+9400000000</p>
         </div>
 
-        <div className="text-center text-black-400 mt-10">
+        <div className="text-center text-black-400 mt-20">
           <p>Follow us on social media:</p>
           <ul className="flex items-center justify-center space-x-14 pt-10 h-[76px] w-full font-sans">
             <li className="relative flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg cursor-pointer transition-transform duration-300 ease-in-out hover:scale-125 hover:shadow-xl group">
@@ -82,8 +85,8 @@ const Contact = () => {
             </li>
 
             <li className="relative flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg cursor-pointer transition-transform duration-300 ease-in-out hover:scale-125 hover:shadow-xl group">
-              <svg className="w-7 h-7 fill-current text-blue-500" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                <path d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"></path>
+              <svg fill="#000000" viewBox="-150 0 800 500"  id="icons" xmlns="http://www.w3.org/2000/svg">
+                <path d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z">  </path>
               </svg>
             </li>
 
@@ -94,6 +97,11 @@ const Contact = () => {
             </li>
           </ul>
         </div>
+
+        <h1 className="text-3xl font-semibold text-center text-gray-800 mt-20">
+          We promise we comfort
+        </h1>
+
       </div>
 
       <Footer />
