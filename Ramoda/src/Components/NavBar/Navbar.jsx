@@ -41,7 +41,9 @@ const Navbar = () => {
               </span>
             </li>
             <li className="relative">
-              <Link to = "/contact" className="uppercase text-white transition duration-300 ease-in-out hover:text-gray-500 cursor-pointer">
+              <Link 
+              to = "/contact"
+               className="uppercase text-white transition duration-300 ease-in-out hover:text-gray-500 cursor-pointer">
                 Contact
               </Link>
             </li>
