@@ -76,7 +76,7 @@ const Home = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-94 object-cover transform transition-transform duration-300 hover:scale-105"
+                  className="w-full h-100 object-cover transform transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <div className="p-6 flex flex-col flex-grow items-center text-center">

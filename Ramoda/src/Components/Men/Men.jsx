@@ -34,7 +34,7 @@ return (
       loading="lazy"
     />
 
-    <div className="text-center mb-8">
+    <div className="text-center mb-12">
       <h1 className="text-5xl font-bold">MEN</h1>
       <p className="text-gray-600 text-lg mt-2">
         WE PROMISE WE COMFORT
@@ -51,7 +51,7 @@ return (
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-94 object-cover transform transition-transform duration-300 hover:scale-105"
+              className="w-full h-100 object-cover transform transition-transform duration-300 hover:scale-105"
             />
           </div>
           <div className="p-6 flex flex-col flex-grow items-center text-center">
@@ -87,7 +87,7 @@ return (
       ))}
     </div>
 
-    <div className="text-center mt-10 mb-4">
+    <div className="text-center mt-12 mb-12">
       <h1 className="text-3xl font-bold">RA-MÓDA</h1>
       <p>MODERN FASHION FROM US TO YOU</p>
     </div>
