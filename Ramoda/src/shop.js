@@ -30,6 +30,15 @@ import M7 from './assets/men/m7.jpg';
 import M8 from './assets/men/m8.jpg';
 
 
+import W1 from './assets/women/1.jpg';
+import W2 from './assets/women/2.jpg';
+import W3 from './assets/women/3.jpg';
+import W4 from './assets/women/4.jpg';
+import W5 from './assets/women/5.jpg';
+import W6 from './assets/women/6.jpg';
+import W7 from './assets/women/7.jpg';
+import W8 from './assets/women/8.jpg';
+
 
 const products = [
   // Latest products
@@ -59,14 +68,27 @@ const products = [
   
   //Men Products
 
-  { id: 31, name: 'M1', price: 'LKR1000', image: m1, isMen: true },
-  { id: 32, name: 'M2', price: 'LKR1000', image: m2, isMen: true },
-  { id: 33, name: 'M3', price: 'LKR1000', image: m3, isMen: true },
-  { id: 34, name: 'M4', price: 'LKR1000', image: m4, isMen: true },
-  { id: 35, name: 'M5', price: 'LKR1000', image: m5, isMen: true },
-  { id: 36, name: 'M6', price: 'LKR1000', image: m6, isMen: true },
-  { id: 37, name: 'M7', price: 'LKR2000', image: m7, isMen: true },
-  { id: 38, name: 'M8', price: 'LKR1000', image: m8, isMen: true },
+  { id: 31, name: 'M1', price: 'LKR1000', image: M1, isMen: true },
+  { id: 32, name: 'M2', price: 'LKR1000', image: M2, isMen: true },
+  { id: 33, name: 'M3', price: 'LKR1000', image: M3, isMen: true },
+  { id: 34, name: 'M4', price: 'LKR1000', image: M4, isMen: true },
+  { id: 35, name: 'M5', price: 'LKR1000', image: M5, isMen: true },
+  { id: 36, name: 'M6', price: 'LKR1000', image: M6, isMen: true },
+  { id: 37, name: 'M7', price: 'LKR2000', image: M7, isMen: true },
+  { id: 38, name: 'M8', price: 'LKR1000', image: M8, isMen: true },
+
+
+  //WoMen Products
+
+  { id: 21, name: 'W1', price: 'LKR1000', image: W1, isWomen: true },
+  { id: 22, name: 'W2', price: 'LKR1000', image: W2, isWomen: true },
+  { id: 23, name: 'W3', price: 'LKR1000', image: W3, isWomen: true },
+  { id: 24, name: 'W4', price: 'LKR1000', image: W4, isWomen: true },
+  { id: 25, name: 'W5', price: 'LKR1000', image: W5, isWomen: true },
+  { id: 26, name: 'W6', price: 'LKR1000', image: W6, isWomen: true },
+  { id: 27, name: 'W7', price: 'LKR2000', image: W7, isWomen: true },
+  { id: 28, name: 'W8', price: 'LKR1000', image: W8, isWomen: true },
+
 ];
 
 

@@ -6,6 +6,7 @@ import Cart from './Components/Cart/Cart';
 import Shop from './Components/Shop/Shop';
 import Contact from './Components/Contact/Contact';
 import Men from './Components/Men/Men';
+import Women from './Components/Women/Women';
 
 import { CartProvider } from './Components/Context/CartContext';
 
@@ -22,6 +23,7 @@ function App() {
               <Route path="/shop" element={<Shop />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/men" element={<Men/>}/>
+              <Route path="/women" element={<Women/>}/>
    
             </Routes>
           </div>

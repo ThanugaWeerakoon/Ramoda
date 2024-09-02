@@ -35,7 +35,7 @@ return (
     />
 
     <div className="text-center mb-8">
-      <h1 className="text-5xl font-bold">SHOP NOW</h1>
+      <h1 className="text-5xl font-bold">MEN</h1>
       <p className="text-gray-600 text-lg mt-2">
         WE PROMISE WE COMFORT
       </p>
