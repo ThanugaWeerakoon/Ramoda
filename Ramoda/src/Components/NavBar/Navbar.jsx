@@ -58,10 +58,10 @@ const Navbar = () => {
               {isDropdownOpen && (
                 <ul className="absolute top-full left-0 mt-1 bg-black text-white shadow-lg py-2 rounded">
                   <li className="px-4 py-2 hover:bg-gray-700">
-                    <Link to="/categories/men">Men</Link>
+                    <Link to="/men">Men</Link>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-700">
-                    <Link to="/categories/women">Women</Link>
+                    <Link to="/women">Women</Link>
                   </li>
                 </ul>
               )}

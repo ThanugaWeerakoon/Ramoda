@@ -20,6 +20,17 @@ import latest6 from './assets/latest/Product6.jpg';
 import latest7 from './assets/latest/Product7.jpg';
 import latest8 from './assets/latest/Product8.jpg';
 
+import M1 from './assets/men/m1.jpg';
+import M2 from './assets/men/m2.jpg';
+import M3 from './assets/men/m3.jpg';
+import M4 from './assets/men/m4.jpg';
+import M5 from './assets/men/m5.jpg';
+import M6 from './assets/men/m6.jpg';
+import M7 from './assets/men/m7.jpg';
+import M8 from './assets/men/m8.jpg';
+
+
+
 const products = [
   // Latest products
   { id: 101, name: 'Latest 1', price: 'LKR2000', image: latest1, isLatest: true },
@@ -44,6 +55,21 @@ const products = [
   { id: 10, name: 'Product 10', price: 'LKR1000', image: product10, isLatest: false },
   { id: 11, name: 'Product 11', price: 'LKR1000', image: product11, isLatest: false },
   { id: 12, name: 'Product 12', price: 'LKR1000', image: product12, isLatest: false },
+
+  
+  //Men Products
+
+  { id: 31, name: 'M1', price: 'LKR1000', image: m1, isMen: true },
+  { id: 32, name: 'M2', price: 'LKR1000', image: m2, isMen: true },
+  { id: 33, name: 'M3', price: 'LKR1000', image: m3, isMen: true },
+  { id: 34, name: 'M4', price: 'LKR1000', image: m4, isMen: true },
+  { id: 35, name: 'M5', price: 'LKR1000', image: m5, isMen: true },
+  { id: 36, name: 'M6', price: 'LKR1000', image: m6, isMen: true },
+  { id: 37, name: 'M7', price: 'LKR2000', image: m7, isMen: true },
+  { id: 38, name: 'M8', price: 'LKR1000', image: m8, isMen: true },
 ];
+
+
+
 
 export default products;
