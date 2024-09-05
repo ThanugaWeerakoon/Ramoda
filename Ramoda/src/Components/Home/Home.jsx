@@ -51,7 +51,7 @@ const Home = () => {
           >
             <img
               src={image}
-              className="w-full h-full object-cover transform transition-transform duration-1000 ease-in-out"
+              className=""
               alt={`Slide ${index}`}
             />
           </div>

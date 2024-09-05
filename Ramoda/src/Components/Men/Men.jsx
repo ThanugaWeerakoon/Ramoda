@@ -51,7 +51,7 @@ return (
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-100 object-cover transform transition-transform duration-300 hover:scale-105"
+              className=""
             />
           </div>
           <div className="p-6 flex flex-col flex-grow items-center text-center">
