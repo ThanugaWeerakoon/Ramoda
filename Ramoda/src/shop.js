@@ -39,6 +39,12 @@ import W6 from './assets/women/6.jpg';
 import W7 from './assets/women/7.jpg';
 import W8 from './assets/women/8.jpg';
 
+import D1 from './assets/dress/1.jpg';
+import D2 from './assets/dress/2.jpg';
+import D3 from './assets/dress/3.jpg';
+import D4 from './assets/dress/4.jpg';
+import D5 from './assets/dress/5.jpg';
+
 
 const products = [
   // Latest products
@@ -88,6 +94,17 @@ const products = [
   { id: 26, name: 'W6', price: 'LKR1000', image: W6, isWomen: true },
   { id: 27, name: 'W7', price: 'LKR2000', image: W7, isWomen: true },
   { id: 28, name: 'W8', price: 'LKR1000', image: W8, isWomen: true },
+
+
+  
+  //Dresses Products
+
+  { id: 111, name: 'D1', price: 'LKR1000', image: D1, isDress: true },
+  { id: 222, name: 'D2', price: 'LKR1000', image: D2, isDress: true },
+  { id: 333, name: 'D3', price: 'LKR1000', image: D3, isDress: true },
+  { id: 444, name: 'D4', price: 'LKR1000', image: D4, isDress: true },
+  { id: 555, name: 'D5', price: 'LKR1000', image: D5, isDress: true },
+
 
 ];
 

@@ -63,6 +63,9 @@ const Navbar = () => {
                   <li className="px-4 py-2 hover:bg-gray-700">
                     <Link to="/women">Women</Link>
                   </li>
+                  <li className="px-4 py-2 hover:bg-gray-700">
+                    <Link to="/dress">Dress</Link>
+                    </li>
                 </ul>
               )}
             </li>
