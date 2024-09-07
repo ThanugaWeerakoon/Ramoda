@@ -1,26 +1,13 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
+
 import { CartContext } from '../Context/CartContext';
 import productsData from '../../shop'; 
-import homePic1 from '../../assets/Home.JPG';
-import homePic2 from '../../assets/Home2.JPG';
-import homePic3 from '../../assets/Home3.JPG';
+import c130 from '../../assets/C0133.mp4';
 import Footer from '../../Components/Footer/Footer';
 
 const Home = () => {
   const { addToCart } = useContext(CartContext);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState({});
-  const images = [homePic1, homePic2, homePic3];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000); 
-
-    return () => clearInterval(interval);
-  }, [images.length]);
 
   const handleSizeChange = (productId, size) => {
     setSelectedSize((prev) => ({ ...prev, [productId]: size }));
@@ -40,22 +27,15 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Image Carousel */}
+     
       <div className="relative w-full h-[120vh] overflow-hidden">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <img
-              src={image}
-              className=""
-              alt={`Slide ${index}`}
-            />
-          </div>
-        ))}
+        <video
+          src={c130} 
+          autoPlay 
+          loop 
+          muted 
+          className="absolute inset-0 w-full h-full object-cover"
+        ></video>
         <div className="absolute inset-0 bg-black opacity-25"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold">RA-MÓDA</h1>
@@ -63,7 +43,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Latest Products Section */}
+      
       <div className="container mx-auto text-center py-16">
         <h2 className="text-4xl font-bold mb-8 text-black">Latest Arrivals</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -113,7 +93,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Footer */}
+   
       <Footer />
     </div>
   );
