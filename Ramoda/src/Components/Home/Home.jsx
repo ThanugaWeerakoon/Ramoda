@@ -58,7 +58,7 @@ const Home = () => {
         ))}
         <div className="absolute inset-0 bg-black opacity-25"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-          <h1 className="text-5xl md:text-7xl font-bold">Welcome to RA-MÓDA</h1>
+          <h1 className="text-5xl md:text-7xl font-bold">RA-MÓDA</h1>
           <p className="text-lg md:text-2xl mt-4">Discover the latest fashion trends</p>
         </div>
       </div>
