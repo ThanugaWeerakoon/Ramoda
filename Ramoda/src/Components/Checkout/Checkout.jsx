@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Footer from '../../Components/Footer/Footer';
+import { CartContext } from '../Context/CartContext';
 import visaImage from '../../assets/checkout/visa.png';
 import mastercardImage from '../../assets/checkout/mastercard.png';
 import kokoImage from '../../assets/checkout/koko.png';
@@ -7,6 +8,7 @@ import mintpayImage from '../../assets/checkout/Mintpay.png';
 import codImage from '../../assets/checkout/cod.png';
 
 const Checkout = () => {
+  const { cartItems } = useContext(CartContext);
   const [isDifferentBillingAddress, setIsDifferentBillingAddress] = useState(false);
 
   const handleBillingAddressChange = (e) => {
@@ -23,18 +25,18 @@ const Checkout = () => {
 
         <div className="lg:max-w-[800px] mx-auto">
           <section className="mb-8">
-            <h2 className="text-xl font-semibold mb-4">Contact</h2>
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full p-3 mb-4 bg-[#3d3d3d] text-white border border-none rounded-[10px]"
-            />
-            <div className="flex items-center">
-              <input type="checkbox" id="news-offers" className="mr-2" />
-              <label htmlFor="news-offers" className="text-gray-400">
-                Email me with news and offers
-              </label>
-            </div>
+            <h2 className="text-xl font-semibold mb-4">Your Cart Items</h2>
+            {cartItems.length === 0 ? (
+              <p>Your cart is empty.</p>
+            ) : (
+              <ul>
+                {cartItems.map((item) => (
+                  <li key={item.uuid}>
+                    {item.name} - {item.size} - {item.price}
+                  </li>
+                ))}
+              </ul>
+            )}
           </section>
 
           <section className="mb-8">
@@ -116,137 +118,60 @@ const Checkout = () => {
               <div className="flex items-center">
                 <input type="radio" id="koko" name="payment-method" className="mr-2" />
                 <label htmlFor="koko" className="flex-grow">Koko: Buy Now Pay Later</label>
-                <img src={kokoImage} alt="koko" className="h-8 ml-2" />
+                <img src={kokoImage} alt="koko" className="h-6 ml-2" />
               </div>
               <div className="flex items-center">
                 <input type="radio" id="mintpay" name="payment-method" className="mr-2" />
-                <label htmlFor="mintpay" className="flex-grow">Mintpay | Shop now. Pay later.</label>
-                <img src={mintpayImage} alt="mintpay" className="h-10 ml-2" />
-              </div>
-              <div className="p-4 bg-[#3d3d3d] border border-none rounded-[10px] mb-4">
-                <p>After clicking "Pay now", you will be redirected to Koko: Buy Now Pay Later to complete your purchase securely.</p>
+                <label htmlFor="mintpay" className="flex-grow">Mintpay</label>
+                <img src={mintpayImage} alt="Mintpay" className="h-6 ml-2" />
               </div>
               <div className="flex items-center">
-                <input type="radio" id="onepay" name="payment-method" className="mr-2" />
-                <label htmlFor="onepay" className="flex-grow">Cash on delivery </label>
-                <img src={codImage} alt="cod" className="h-14 w-13" />
+                <input type="radio" id="cod" name="payment-method" className="mr-2" />
+                <label htmlFor="cod" className="flex-grow">Cash on Delivery</label>
+                <img src={codImage} alt="cod" className="h-6 ml-2" />
               </div>
             </div>
           </section>
 
-          <section className="mb-8">
+          <section>
             <h2 className="text-xl font-semibold mb-4">Billing address</h2>
             <div className="flex items-center mb-4">
-              <input
-                type="radio"
-                id="same-address"
-                name="billing-address"
-                className="mr-2"
-                onChange={handleBillingAddressChange}
-              />
-              <label htmlFor="same-address" className="flex-grow">Same as shipping address</label>
+              <input type="radio" id="same-address" name="billing-address" className="mr-2" onChange={handleBillingAddressChange} />
+              <label htmlFor="same-address" className="flex-grow">Same as delivery address</label>
             </div>
-            <div className="flex items-center">
-              <input
-                type="radio"
-                id="different-address"
-                name="billing-address"
-                className="mr-2"
-                onChange={handleBillingAddressChange}
-              />
+            <div className="flex items-center mb-4">
+              <input type="radio" id="different-address" name="billing-address" className="mr-2" onChange={handleBillingAddressChange} />
               <label htmlFor="different-address" className="flex-grow">Use a different billing address</label>
             </div>
 
             {isDifferentBillingAddress && (
-              <div className="mt-4 p-4 border border-gray-300 rounded-[10px]">
-                <h3 className="text-lg font-medium mb-2">Different Billing Address</h3>
-                <form>
-                  <div className="mb-4">
-                    <label htmlFor="billing-name" className="block text-sm font-medium mb-1">Name</label>
-                    <input
-                      type="text"
-                      id="billing-name"
-                      name="billing-name"
-                      className="w-full p-2 bg-[#3d3d3d] text-white border border-none rounded-[10px]"
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label htmlFor="billing-street" className="block text-sm font-medium mb-1">Street Address</label>
-                    <input
-                      type="text"
-                      id="billing-street"
-                      name="billing-street"
-                      className="w-full p-2 bg-[#3d3d3d] text-white border border-none rounded-[10px]"
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label htmlFor="billing-city" className="block text-sm font-medium mb-1">City</label>
-                    <input
-                      type="text"
-                      id="billing-city"
-                      name="billing-city"
-                      className="w-full p-2 bg-[#3d3d3d] text-white border border-none rounded-[10px]"
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label htmlFor="billing-zip" className="block text-sm font-medium mb-1">Postal Code</label>
-                    <input
-                      type="text"
-                      id="billing-zip"
-                      name="billing-zip"
-                      className="w-full p-2 bg-[#3d3d3d] text-white border border-none rounded-[10px]"
-                    />
-                  </div>
-                </form>
+              <div className="mt-4">
+                <input
+                  type="text"
+                  placeholder="Address"
+                  className="w-full p-3 mb-4 bg-[#3d3d3d] text-white border border-none rounded-[10px]"
+                />
+                <div className="flex space-x-4 mb-4">
+                  <input
+                    type="text"
+                    placeholder="City"
+                    className="w-1/2 p-3 bg-[#3d3d3d] text-white border border-none rounded-[10px]"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Postal code"
+                    className="w-1/2 p-3 bg-[#3d3d3d] text-white border border-none rounded-[10px]"
+                  />
+                </div>
               </div>
             )}
           </section>
-
-          <section className="mb-8">
-            <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
-            <div className="overflow-x-auto">
-              <table className="table-auto w-full border-collapse bg-[#3d3d3d] text-white">
-                <thead>
-                  <tr>
-                    <th className="py-2 px-4 text-left border-b">Product</th>
-                    <th className="py-2 px-4 text-left border-b">Quantity</th>
-                    <th className="py-2 px-4 text-left border-b">Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="py-2 px-4 border-b">Item 1</td>
-                    <td className="py-2 px-4 border-b">1</td>
-                    <td className="py-2 px-4 border-b">Rs 1000.00</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 px-4 border-b">Item 2</td>
-                    <td className="py-2 px-4 border-b">2</td>
-                    <td className="py-2 px-4 border-b">Rs 2000.00</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 px-4 border-b">Item 3</td>
-                    <td className="py-2 px-4 border-b">1</td>
-                    <td className="py-2 px-4 border-b">Rs 1500.00</td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td className="py-2 px-4 border-b"></td>
-                    <td className="py-2 px-4 font-semibold">Total</td>
-                    <td className="py-2 px-4 font-semibold">Rs 4500.00</td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-          </section>
-
-          <button className="w-full py-4 mt-6 bg-green-600 hover:bg-green-700 text-white rounded-[10px]">
-            Pay now
-          </button>
         </div>
       </div>
-      <Footer />
+
+      <div className="bg-[#3d3d3d] py-6">
+        <Footer />
+      </div>
     </div>
   );
 };

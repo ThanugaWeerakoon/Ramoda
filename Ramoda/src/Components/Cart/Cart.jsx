@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import cartpic from '../../assets/carthome.jpg';
 import { CartContext } from '../Context/CartContext';
 import Footer from '../../Components/Footer/Footer';
+import { Link } from 'react-router-dom';
 
 function Cart() {
   const { cartItems, removeItemFromCart } = useContext(CartContext);
@@ -46,7 +47,7 @@ function Cart() {
 
       <div className="flex justify-center mt-8">
         <button className="bg-black hover:bg-[#3d3d3d] text-white font-bold py-2 px-6 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
-          <a href="/Checkout">Check Out</a>
+        <Link to="/checkout">Checkout</Link>
         </button>
       </div>
 
