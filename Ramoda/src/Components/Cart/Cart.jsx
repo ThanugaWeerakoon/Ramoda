@@ -11,11 +11,11 @@ function Cart() {
   };
 
   return (
-    <section className=" min-h-screen">
+    <section className="min-h-screen">
       <img src={cartpic} className="w-full object-cover mb-4 sm:mb-8 rounded-lg shadow-md" alt="Cart" />
 
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white shadow-md rounded-lg border border-gray-200">
+      <div className="overflow-x-auto max-w-6xl mx-auto">
+        <table className="w-full bg-white shadow-md rounded-lg border border-gray-200">
           <thead>
             <tr className="bg-gradient-to-r from-black to-black text-white">
               <th className="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider">Product Name</th>
@@ -44,19 +44,17 @@ function Cart() {
         </table>
       </div>
 
-      <div className="flex justify-end mt-8">
-        
+      <div className="flex justify-center mt-8">
         <button className="bg-black hover:bg-[#3d3d3d] text-white font-bold py-2 px-6 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
-        <a href="/Checkout"> Check Out</a>
+          <a href="/Checkout">Check Out</a>
         </button>
-        
       </div>
 
       <div className="footer mt-10 py-6 bg-white border-t border-gray-200">
         <h1 className="text-3xl font-bold text-black text-center">RA-MÓDA</h1>
         <p className="text-gray-600 text-center mt-2">MODERN FASHION FROM US TO YOU</p>
       </div>
-      <Footer/>
+      <Footer />
     </section>
   );
 }
