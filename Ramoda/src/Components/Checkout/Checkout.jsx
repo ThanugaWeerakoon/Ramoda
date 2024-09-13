@@ -20,24 +20,48 @@ const Checkout = () => {
       <div className="flex-grow py-40 px-6 lg:px-24">
         <header className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">Checkout Here</h1>
-          <a href="#" className="text-white">Log in</a>
         </header>
 
         <div className="lg:max-w-[800px] mx-auto">
-          <section className="mb-8">
-            <h2 className="text-xl font-semibold mb-4">Your Cart Items</h2>
-            {cartItems.length === 0 ? (
+
+
+
+{/* ******************************************************************************** Cart Items ********************************************************************************** */}
+
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold mb-4">Your Cart Items</h2>
+          {cartItems.length === 0 ? (
+            <div className="w-full p-3 bg-[#3d3d3d] text-white border border-none rounded-[10px]">
               <p>Your cart is empty.</p>
-            ) : (
-              <ul>
+            </div>
+          ) : (
+            <div className="w-full p-3 bg-[#3d3d3d] text-white border border-none rounded-[10px]">
+              <ul className="space-y-3">
                 {cartItems.map((item) => (
-                  <li key={item.uuid}>
-                    {item.name} - {item.size} - {item.price}
+                  <li key={item.uuid} className="flex justify-between items-center">
+                    <span>{item.name}</span>
+                    <span>{item.size}</span>
+                    <span>Rs {item.price}</span>
                   </li>
                 ))}
               </ul>
-            )}
-          </section>
+
+              <div className="flex justify-between items-center mt-4 pt-4 border-t border-gray-600">
+                <span className="text-lg font-semibold">Total:</span>
+                <span className="text-lg font-semibold">
+                  Rs {cartItems.reduce((total, item) => total = (item.price), 0)}
+                </span>
+
+              </div>
+
+            </div>
+          )}
+        </section>
+
+{/* ******************************************************************************** /Cart Items ********************************************************************************** */}
+
+
+
 
           <section className="mb-8">
             <h2 className="text-xl font-semibold mb-4">Delivery</h2>

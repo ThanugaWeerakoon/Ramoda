@@ -6,7 +6,7 @@ const Contact = () => {
     <div className="min-h-screen flex flex-col justify-between">
       <div className="flex-grow py-40  bg-gray-200 px-6 lg:px-24">
         <h2 className="text-6xl text-center text-black-800 mb-8 font-extrabold">
-          Get in Touch
+          Get in Touch HUTTOOOOOOO !!!!!!!!!!
         </h2>
         <p className="text-center text-black-600 mb-12 mt-20">
           We'd love to hear from you! Whether you have a question about our products or just want to chat, feel free to reach out.

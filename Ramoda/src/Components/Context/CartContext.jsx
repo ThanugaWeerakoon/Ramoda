@@ -42,7 +42,8 @@ const CartProvider = ({ children }) => {
         getCartItems, 
         removeItemFromCart, 
         proceedToCheckout, 
-        getCheckoutItems 
+        getCheckoutItems,
+        
       }}
     >
       {children}
