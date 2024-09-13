@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
 import { CartContext } from '../Context/CartContext';
 import visaImage from '../../assets/checkout/visa.png';
@@ -6,6 +7,7 @@ import mastercardImage from '../../assets/checkout/mastercard.png';
 import kokoImage from '../../assets/checkout/koko.png';
 import mintpayImage from '../../assets/checkout/Mintpay.png';
 import codImage from '../../assets/checkout/cod.png';
+
 
 const Checkout = () => {
   const { cartItems } = useContext(CartContext);
@@ -49,7 +51,7 @@ const Checkout = () => {
               <div className="flex justify-between items-center mt-4 pt-4 border-t border-gray-600">
                 <span className="text-lg font-semibold">Total:</span>
                 <span className="text-lg font-semibold">
-                  Rs {cartItems.reduce((total, item) => total = (item.price), 0)}
+                Rs {cartItems.reduce((total, item) => total + item.price, 0)}
                 </span>
 
               </div>
@@ -58,7 +60,7 @@ const Checkout = () => {
           )}
         </section>
 
-{/* ******************************************************************************** /Cart Items ********************************************************************************** */}
+{/* ******************************************************************************** /Cart Items ***********************************************************************************/}
 
 
 
@@ -190,6 +192,23 @@ const Checkout = () => {
               </div>
             )}
           </section>
+          <br />
+
+
+
+{/* ******************************************************************************** /link ***********************************************************************************/}
+
+
+         <Link to="/form">
+            <button className="w-full p-3 mb-4 border border-none rounded-[10px] bg-yellow-500 text-white font-bold py-2 px-6 hover:bg-yellow-600 transition-transform duration-300 ease-in-out hover:scale-105 focus:outline-none focus:shadow-outline" type="button">
+              Proceed
+            </button>
+          </Link>
+
+
+{/* ******************************************************************************** /Link ***********************************************************************************/}
+
+          
         </div>
       </div>
 

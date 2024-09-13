@@ -46,9 +46,11 @@ function Cart() {
       </div>
 
       <div className="flex justify-center mt-8">
-        <button className="bg-black hover:bg-[#3d3d3d] text-white font-bold py-2 px-6 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
-        <Link to="/checkout">Checkout</Link>
-        </button>
+        <Link to="/checkout">
+          <button className="bg-black hover:bg-[#3d3d3d] text-white font-bold py-2 px-6 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+            Checkout
+          </button>
+        </Link>
       </div>
 
       <div className="footer mt-10 py-6 bg-white border-t border-gray-200">
