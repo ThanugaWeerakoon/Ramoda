@@ -8,7 +8,7 @@ export const Checkout = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_lhpy25o', 'template_hkcg0fp', form.current, 'h5nv_sQcrzoOJ8ngD') // Public key goes here
+      .sendForm('service_lhpy25o', 'template_hkcg0fp', form.current, 'h5nv_sQcrzoOJ8ngD') 
       .then(
         () => {
           console.log('SUCCESS!');

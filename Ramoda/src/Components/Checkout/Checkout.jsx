@@ -47,10 +47,10 @@ const Checkout = () => {
     };
 
     emailjs.send(
-      'service_lhpy25o',         // Service ID
-      'template_hkcg0fp',        // Template ID
+      'service_lhpy25o',         
+      'template_hkcg0fp',        
       templateParams,
-      'h5nv_sQcrzoOJ8ngD'        // Public Key
+      'h5nv_sQcrzoOJ8ngD'        
     )
     .then((response) => {
       console.log('Email sent successfully!', response.status, response.text);
@@ -165,7 +165,6 @@ const Checkout = () => {
             />
           </section>
 
-          {/* Payment and Billing sections omitted for brevity */}
 
           <button
             onClick={handleProceedClick}
