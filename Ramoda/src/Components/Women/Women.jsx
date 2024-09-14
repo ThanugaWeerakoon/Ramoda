@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import women from '../../assets/women.jpg';
+import women from '../../assets/videos/Women.mp4';
 import { CartContext } from '../Context/CartContext';
 import productsData from '../../shop'; 
 import Footer from '../../Components/Footer/Footer';
@@ -27,19 +27,28 @@ const menProducts = productsData.filter(product => product.isWomen);
 
 return (
   <section className="min-h-screen">
-    <img
-      src={women}
-      className="w-full object-cover mb-4 sm:mb-8"
-      alt="shop"
-      loading="lazy"
-    />
+    
+    {/* **************************************************************************** Video *************************************************************************************** */}
 
-    <div className="text-center mb-12">
-      <h1 className="text-5xl font-bold">WOMEN</h1>
-      <p className="text-gray-600 text-lg mt-2">
-        WE PROMISE WE COMFORT
-      </p>
-    </div>
+
+    <div className="relative w-full h-[75vh] overflow-hidden">
+        <video
+          src={women} 
+          autoPlay 
+          loop 
+          muted 
+          className="absolute inset-0 w-full h-full object-cover"
+        ></video>
+        <div className="absolute inset-0 bg-black opacity-25"></div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+          <h1 className="text-5xl md:text-7xl font-bold">WOMEN</h1>
+          <p className="text-lg md:text-2xl mt-4">People will stare. Make it worth their while</p>
+        </div>
+      </div>  
+
+{/* **************************************************************************** /Video *************************************************************************************** */}
+<br /><br />
+
 
     <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       {menProducts.map((product) => (
@@ -87,10 +96,11 @@ return (
       ))}
     </div>
 
-    <div className="text-center mt-12 mb-12">
+    <div className="text-center mt-48 mb-48">
       <h1 className="text-3xl font-bold">RA-MÓDA</h1>
       <p>MODERN FASHION FROM US TO YOU</p>
     </div>
+    
     <Footer />
   </section>
 );

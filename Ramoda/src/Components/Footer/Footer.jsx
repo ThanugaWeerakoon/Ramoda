@@ -30,7 +30,7 @@ const Footer = () => {
           <p className="mb-4">Be the first to know about new arrivals, sales, and promotions by subscribing to our newsletter today!</p>
           <form action="#" className="flex flex-col sm:flex-row">
             <input type="email" placeholder="Enter your email address" className="px-4 py-2 mb-2 sm:mb-0 sm:mr-2 flex-grow rounded-md border-none"/>
-            <button type="submit" className="px-4 py-2 bg-gray-700 rounded-md hover:bg-gray-600">SUBSCRIBE</button>
+            <button type="submit" className="px-4 py-2 bg-[#212121] rounded-md hover:bg-[#3d3d3d]">SUBSCRIBE</button>
           </form>
         </div>
       </div>

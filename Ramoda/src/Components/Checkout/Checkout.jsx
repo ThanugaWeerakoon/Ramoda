@@ -20,7 +20,6 @@ const Checkout = () => {
 
   const navigate = useNavigate();
 
-  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -30,6 +29,13 @@ const Checkout = () => {
   };
 
   const handleProceedClick = () => {
+    // Validate form data before sending the email
+    if (!formData.firstName || !formData.lastName || !formData.address || !formData.city || !formData.postalCode || !formData.phone) {
+      alert("Please fill in all the required fields.");
+      return; // Stop the process if validation fails
+    }
+
+    // If validation passes, proceed to send the email
     const templateParams = {
       firstName: formData.firstName,
       lastName: formData.lastName,
@@ -52,7 +58,6 @@ const Checkout = () => {
     .then((response) => {
       console.log('Email sent successfully!', response.status, response.text);
       alert('Your order has been placed and the shop owner has been notified!');
-      navigate('/form');
     })
     .catch((error) => {
       console.error('Failed to send email:', error);
@@ -165,9 +170,10 @@ const Checkout = () => {
             />
           </section>
 
-          <button onClick={handleProceedClick} className="bg-blue-600 text-white p-3 rounded-md hover:bg-blue-500">
+          <button onClick={handleProceedClick} className="bg-yellow-500 text-white w-full p-3 rounded-[10px]  hover:bg-yellow-400">
             Proceed
           </button>
+
         </div>
       </div>
 

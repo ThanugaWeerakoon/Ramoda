@@ -13,9 +13,9 @@ function Cart() {
 
   return (
     <section className="min-h-screen">
-      <img src={cartpic} className="w-full object-cover mb-4 sm:mb-8 rounded-lg shadow-md" alt="Cart" />
+      {/* <img src={cartpic} className="w-full object-cover mb-4 sm:mb-8 rounded-lg shadow-md" alt="Cart" /> */}
 
-      <div className="overflow-x-auto max-w-6xl mx-auto">
+      <div className="overflow-x-auto max-w-6xl mx-auto flex-grow py-40 px-6 lg:px-24">
         <table className="w-full bg-white shadow-md rounded-lg border border-gray-200">
           <thead>
             <tr className="bg-gradient-to-r from-black to-black text-white">
@@ -34,8 +34,7 @@ function Cart() {
                 <td className="px-6 py-4 text-sm">
                   <button
                     onClick={() => handleRemoveItem(item.uuid)}
-                    className="bg-black hover:bg-gray-600 text-white py-1 px-3 rounded-md shadow-sm hover:shadow-lg transition-shadow duration-200"
-                  >
+                    className="bg-black hover:bg-gray-600 text-white py-1 px-3 rounded-md shadow-sm hover:shadow-lg transition-shadow duration-200" >
                     Remove
                   </button>
                 </td>

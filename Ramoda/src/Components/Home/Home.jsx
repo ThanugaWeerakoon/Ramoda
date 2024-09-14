@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-100">
      
-      <div className="relative w-full h-[120vh] overflow-hidden">
+      <div className="relative w-full h-[75vh] overflow-hidden">
         <video
           src={c130} 
           autoPlay 
