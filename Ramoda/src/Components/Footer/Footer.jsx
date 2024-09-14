@@ -13,7 +13,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">CONTACT US</h3>
           <ul className="space-y-2">
             <li>📞 +94 741 676 595</li>
-            <li>📧 ramoda@gmal.com</li>
+            <li>📧 ramoda@gmail.com</li>
           </ul>
         </div>
         

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import women from '../../assets/women.jpg';
+import dress from '../../assets/videos/Dress.mp4';
 import { CartContext } from '../Context/CartContext';
 import productsData from '../../shop'; 
 import Footer from '../../Components/Footer/Footer';
@@ -27,19 +27,32 @@ const menProducts = productsData.filter(product => product.isDress);
 
 return (
   <section className="min-h-screen">
-    <img
-      src={women}
-      className="w-full object-cover mb-4 sm:mb-8"
-      alt="shop"
-      loading="lazy"
-    />
 
-    <div className="text-center mb-12">
-      <h1 className="text-5xl font-bold">WOMEN Dresses</h1>
-      <p className="text-gray-600 text-lg mt-2">
-        WE PROMISE WE COMFORT
-      </p>
-    </div>
+
+
+{/* **************************************************************************** Video *************************************************************************************** */}
+
+
+<div className="relative w-full h-[75vh] overflow-hidden">
+        <video
+          src={dress} 
+          autoPlay 
+          loop 
+          muted 
+          className="absolute inset-0 w-full h-full object-cover"
+        ></video>
+        <div className="absolute inset-0 bg-black opacity-25"></div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+          <h1 className="text-5xl md:text-7xl font-bold">DRESS</h1>
+          <p className="text-lg md:text-2xl mt-4"></p>
+        </div>
+      </div>  
+
+{/* **************************************************************************** /Video *************************************************************************************** */}
+<br /><br />
+
+
+
 
     <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       {menProducts.map((product) => (

@@ -1,13 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CartContext } from '../Context/CartContext';
 import Footer from '../../Components/Footer/Footer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Cart() {
   const { cartItems, removeItemFromCart } = useContext(CartContext);
+  const [showError, setShowError] = useState(false);
+  const navigate = useNavigate();
 
   const handleRemoveItem = (itemUuid) => {
     removeItemFromCart(itemUuid);
+  };
+
+  const handleCheckout = () => {
+    if (cartItems.length === 0) {
+      setShowError(true); // Display the error popup
+    } else {
+      navigate('/checkout'); // Redirect to checkout page
+    }
   };
 
   return (
@@ -32,7 +42,7 @@ function Cart() {
                 <td className="px-6 py-4 text-sm">
                   <button
                     onClick={() => handleRemoveItem(item.uuid)}
-                    className="bg-black hover:bg-gray-600 text-white py-1 px-3 rounded-md shadow-sm hover:shadow-lg transition-shadow duration-200" >
+                    className="bg-black hover:bg-[#3d3d3d] text-white py-1 px-3 rounded-md shadow-sm hover:shadow-lg transition-shadow duration-200" >
                     Remove
                   </button>
                 </td>
@@ -43,12 +53,28 @@ function Cart() {
       </div>
 
       <div className="flex justify-center mt-8">
-        <Link to="/checkout">
-          <button className="bg-black hover:bg-[#3d3d3d] text-white font-bold py-2 px-6 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
-            Checkout
-          </button>
-        </Link>
+        <button
+          onClick={handleCheckout}
+          className="bg-black hover:bg-[#3d3d3d] text-white font-bold py-2 px-6 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+        >
+          Checkout
+        </button>
       </div>
+
+      {showError && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-md shadow-lg">
+            <h2 className="text-lg font-semibold">Error</h2>
+            <p className="mt-2">Your cart is empty. Please add items to your cart before proceeding to checkout.</p>
+            <button
+              onClick={() => setShowError(false)}
+              className="mt-4 bg-black text-white py-2 px-4 rounded-md"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className="text-center mt-48 mb-48">
         <h1 className="text-3xl font-bold">RA-MÓDA</h1>
