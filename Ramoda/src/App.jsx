@@ -10,7 +10,7 @@ import Women from './Components/Women/Women';
 import Checkout from './Components/Checkout/Checkout';
 import Dress from './Components/Dress/Dress';
 import { CartProvider } from './Components/Context/CartContext';
-import Form from './Components/Form/Form';
+
 
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
                  <Route path="/women" element={<Women />} />
                  <Route path="/checkout" element={<Checkout />} />
                  <Route path="/dress" element={<Dress />} />
-                 <Route path="/form" element={<Form />} /> 
+                 
             </Routes>
           </div>
         </div>

@@ -2,11 +2,6 @@ import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
 import { CartContext } from '../Context/CartContext';
-import visaImage from '../../assets/checkout/visa.png';
-import mastercardImage from '../../assets/checkout/mastercard.png';
-import kokoImage from '../../assets/checkout/koko.png';
-import mintpayImage from '../../assets/checkout/Mintpay.png';
-import codImage from '../../assets/checkout/cod.png';
 import emailjs from 'emailjs-com';  
 
 const Checkout = () => {
@@ -25,12 +20,21 @@ const Checkout = () => {
 
   const navigate = useNavigate();
 
+  
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
   const handleProceedClick = () => {
     const templateParams = {
       firstName: formData.firstName,
       lastName: formData.lastName,
       address: formData.address,
-      apartment: formData.apartment,
+      apartment: formData.apartment || 'N/A', 
       city: formData.city,
       postalCode: formData.postalCode,
       phone: formData.phone,
@@ -38,18 +42,16 @@ const Checkout = () => {
       cartItems: cartItems.map((item) => `${item.name} (Size: ${item.size}) - Rs ${item.price}`).join(', '),
       totalPrice: cartItems.reduce((total, item) => total + item.price, 0),
     };
-
+  
     emailjs.send(
-      'service_lhpy25o',         
-      'template_hkcg0fp',        
+      'service_lhpy25o',  // Your service ID
+      'template_nvy070d', // Your template ID
       templateParams,
-      'h5nv_sQcrzoOJ8ngD'        
+      'h5nv_sQcrzoOJ8ngD'  // Your public key
     )
     .then((response) => {
       console.log('Email sent successfully!', response.status, response.text);
       alert('Your order has been placed and the shop owner has been notified!');
-      
-     
       navigate('/form');
     })
     .catch((error) => {
@@ -66,6 +68,7 @@ const Checkout = () => {
         </header>
 
         <div className="lg:max-w-[800px] mx-auto">
+          {/* Cart Items Section */}
           <section className="mb-8">
             <h2 className="text-xl font-semibold mb-4">Your Cart Items</h2>
             {cartItems.length === 0 ? (
@@ -94,6 +97,7 @@ const Checkout = () => {
             )}
           </section>
 
+          {/* Delivery Section */}
           <section className="mb-8">
             <h2 className="text-xl font-semibold mb-4">Delivery</h2>
             <div className="w-full p-3 mb-4 bg-[#3d3d3d] text-white border border-none rounded-[10px]">
@@ -161,10 +165,9 @@ const Checkout = () => {
             />
           </section>
 
-
-          <button onClick={handleProceedClick} className="proceed-button">
-        Proceed
-      </button>
+          <button onClick={handleProceedClick} className="bg-blue-600 text-white p-3 rounded-md hover:bg-blue-500">
+            Proceed
+          </button>
         </div>
       </div>
 
