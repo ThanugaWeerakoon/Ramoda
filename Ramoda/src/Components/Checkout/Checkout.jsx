@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
 import { CartContext } from '../Context/CartContext';
 import visaImage from '../../assets/checkout/visa.png';
@@ -7,7 +7,7 @@ import mastercardImage from '../../assets/checkout/mastercard.png';
 import kokoImage from '../../assets/checkout/koko.png';
 import mintpayImage from '../../assets/checkout/Mintpay.png';
 import codImage from '../../assets/checkout/cod.png';
-import emailjs from 'emailjs-com';  // Import emailjs
+import emailjs from 'emailjs-com';  
 
 const Checkout = () => {
   const { cartItems } = useContext(CartContext);
@@ -23,15 +23,8 @@ const Checkout = () => {
     billingAddress: '',
   });
 
-  const handleBillingAddressChange = (e) => {
-    setIsDifferentBillingAddress(e.target.id === 'different-address');
-  };
+  const navigate = useNavigate();
 
-  const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  // Send Email using EmailJS
   const handleProceedClick = () => {
     const templateParams = {
       firstName: formData.firstName,
@@ -55,6 +48,9 @@ const Checkout = () => {
     .then((response) => {
       console.log('Email sent successfully!', response.status, response.text);
       alert('Your order has been placed and the shop owner has been notified!');
+      
+     
+      navigate('/form');
     })
     .catch((error) => {
       console.error('Failed to send email:', error);
@@ -166,12 +162,9 @@ const Checkout = () => {
           </section>
 
 
-          <button
-            onClick={handleProceedClick}
-            className="w-full p-3 mb-4 border border-none rounded-[10px] bg-yellow-500 text-white font-bold py-2 px-6 hover:bg-yellow-600 transition-transform duration-300 ease-in-out hover:scale-105 focus:outline-none focus:shadow-outline"
-          >
-            Proceed
-          </button>
+          <button onClick={handleProceedClick} className="proceed-button">
+        Proceed
+      </button>
         </div>
       </div>
 

@@ -20,18 +20,16 @@ function App() {
         <div className='min-h-screen flex flex-col'>
           <Navbar />
           <div className='flex-grow'>
-            <Routes>
+             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/men" element={<Men/>}/>
-              <Route path="/women" element={<Women/>}/>
-              <Route path="/checkout" element={<Checkout/>}/>
-              <Route path="/dress" element={<Dress/>}/>
-              <Route path="/form" element={<Form/>}/>
-            
-    
+               <Route path="/shop" element={<Shop />} />
+                 <Route path="/contact" element={<Contact />} />
+                 <Route path="/men" element={<Men />} />
+                 <Route path="/women" element={<Women />} />
+                 <Route path="/checkout" element={<Checkout />} />
+                 <Route path="/dress" element={<Dress />} />
+                 <Route path="/form" element={<Form />} /> 
             </Routes>
           </div>
         </div>
