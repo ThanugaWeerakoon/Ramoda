@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-const Form = () => {
+export const Checkout = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_lhpy25o', 'template_hkcg0fp', form.current, 'h5nv_sQcrzoOJ8ngD') // Public key goes here
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-[#212121] text-white flex-grow py-40 px-6 lg:px-24">
-      <header className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">Meekata link karapn Checkout eke tika ena vidihata. mn Form eka ghnnm :) <br /> <br /> Bye  </h1>
-      </header>
-    </div>
-  )
-}
+    <form ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" required />
+      <label>Email</label>
+      <input type="email" name="user_email" required />
+      <label>Message</label>
+      <textarea name="message" required />
+      <input type="submit" value="Send" />
+    </form>
+  );
+};
 
-export default Form
+export default Checkout;

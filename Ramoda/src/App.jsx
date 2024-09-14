@@ -12,6 +12,7 @@ import Dress from './Components/Dress/Dress';
 import { CartProvider } from './Components/Context/CartContext';
 import Form from './Components/Form/Form';
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -28,8 +29,9 @@ function App() {
               <Route path="/women" element={<Women/>}/>
               <Route path="/checkout" element={<Checkout/>}/>
               <Route path="/dress" element={<Dress/>}/>
-              <Route path="form" element={<Form/>}/>
-   
+              <Route path="/form" element={<Form/>}/>
+            
+    
             </Routes>
           </div>
         </div>

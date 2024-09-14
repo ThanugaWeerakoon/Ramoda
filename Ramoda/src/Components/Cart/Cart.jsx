@@ -46,7 +46,7 @@ function Cart() {
       </div>
 
       <div className="flex justify-center mt-8">
-        <Link to="/checkout">
+        <Link to="/form">
           <button className="bg-black hover:bg-[#3d3d3d] text-white font-bold py-2 px-6 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
             Checkout
           </button>
