@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import cartpic from '../../assets/carthome.jpg';
 import { CartContext } from '../Context/CartContext';
 import Footer from '../../Components/Footer/Footer';
 import { Link } from 'react-router-dom';
@@ -13,7 +12,6 @@ function Cart() {
 
   return (
     <section className="min-h-screen">
-      {/* <img src={cartpic} className="w-full object-cover mb-4 sm:mb-8 rounded-lg shadow-md" alt="Cart" /> */}
 
       <div className="overflow-x-auto max-w-6xl mx-auto flex-grow py-40 px-6 lg:px-24">
         <table className="w-full bg-white shadow-md rounded-lg border border-gray-200">
@@ -52,10 +50,11 @@ function Cart() {
         </Link>
       </div>
 
-      <div className="footer mt-10 py-6 bg-white border-t border-gray-200">
-        <h1 className="text-3xl font-bold text-black text-center">RA-MÓDA</h1>
-        <p className="text-gray-600 text-center mt-2">MODERN FASHION FROM US TO YOU</p>
+      <div className="text-center mt-48 mb-48">
+        <h1 className="text-3xl font-bold">RA-MÓDA</h1>
+        <p>MODERN FASHION FROM US TO YOU</p>
       </div>
+
       <Footer />
     </section>
   );

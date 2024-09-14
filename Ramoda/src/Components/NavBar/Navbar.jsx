@@ -56,17 +56,26 @@ const Navbar = () => {
                 Categories
               </span>
               {isDropdownOpen && (
-                <ul className="absolute top-full left-0 mt-1 bg-black text-white shadow-lg py-2 rounded">
-                  <li className="px-4 py-2 hover:bg-[#3d3d3d]">
-                    <Link to="/men">Men</Link>
+
+                <ul className="absolute top-full left-0 mt-1 bg-black text-center text-white shadow-lg py-2 rounded">
+                  <li>
+                    <Link to="/men" className="block px-4 py-2 hover:bg-[#3d3d3d]">
+                      Men
+                    </Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-[#3d3d3d]">
-                    <Link to="/women">Women</Link>
+                  <li>
+                    <Link to="/women" className="block px-4 py-2 hover:bg-[#3d3d3d]">
+                      Women
+                    </Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-[#3d3d3d]">
-                    <Link to="/dress">Dress</Link>
-                    </li>
+                  <li>
+                    <Link to="/dress" className="block px-4 py-2 hover:bg-[#3d3d3d]">
+                      Dress
+                    </Link>
+                  </li>
                 </ul>
+
+              
               )}
             </li>
             <li className="relative">
