@@ -17,8 +17,10 @@
     "mongoose": "^8.6.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^6.26.1",
     "react-slick": "^0.30.2",
+    "react-window": "^1.8.10",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.11",
     "uuid": "^10.0.0"

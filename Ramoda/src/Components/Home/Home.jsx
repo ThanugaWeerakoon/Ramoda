@@ -1,13 +1,21 @@
-import React, { useState, useContext } from 'react';
-
+import React, { useState, useContext, useEffect } from 'react';
 import { CartContext } from '../Context/CartContext';
 import productsData from '../../shop'; 
 import c130 from '../../assets/C0133.mp4';
 import Footer from '../../Components/Footer/Footer';
+import LoaderComp from '../../Components/LoaderComp/LoaderComp';
 
 const Home = () => {
   const { addToCart } = useContext(CartContext);
   const [selectedSize, setSelectedSize] = useState({});
+  const [loading, setLoading] = useState(true); // Loading state
+
+  useEffect(() => {
+    // Simulate loading time, you can replace this with your data fetching logic
+    setTimeout(() => {
+      setLoading(false); // Set loading to false once everything is loaded
+    }, 1500); // Adjust delay based on actual data loading
+  }, []);
 
   const handleSizeChange = (productId, size) => {
     setSelectedSize((prev) => ({ ...prev, [productId]: size }));
@@ -25,9 +33,12 @@ const Home = () => {
 
   const latestProducts = productsData.filter(product => product.isLatest);
 
+  if (loading) {
+    return <LoaderComp />; // Show loader when loading
+  }
+
   return (
     <div className="min-h-screen bg-gray-100">
-     
       <div className="relative w-full h-[75vh] overflow-hidden">
         <video
           src={c130} 
@@ -43,7 +54,6 @@ const Home = () => {
         </div>
       </div>
 
-      
       <div className="container mx-auto text-center py-16">
         <h2 className="text-4xl font-bold mb-8 text-black">Latest Arrivals</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -93,7 +103,6 @@ const Home = () => {
         </div>
       </div>
 
-   
       <Footer />
     </div>
   );
