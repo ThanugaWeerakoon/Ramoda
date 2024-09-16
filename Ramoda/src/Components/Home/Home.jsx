@@ -17,7 +17,7 @@ import LoaderComp from '../../Components/LoaderComp/LoaderComp';
 // PhotoContainer Component
 const PhotoContainer = () => {
   return (
-    <div className="container w-full mx-auto ">
+    <div className="w-full mx-auto ">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-32">
 
         {/* Large Photo */}
@@ -113,7 +113,7 @@ const Home = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-white">
 
       {/* Video Section */}
       <section className="video">
@@ -133,7 +133,7 @@ const Home = () => {
       
     
       {/* Main Content */}
-      <div className="container mx-auto text-center py-16 mt-[52rem]">
+      <div className="mx-auto text-center px-10 mt-[52rem]">
         <h2 className="text-4xl font-bold mb-14 mt-8 text-black">WE PROMISE WE COMFORT</h2>
 
         
