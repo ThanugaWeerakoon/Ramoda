@@ -133,10 +133,9 @@ const Home = () => {
       
     
       {/* Main Content */}
-      <div className="mx-auto text-center px-10 mt-[52rem]">
-        <h2 className="text-4xl font-bold mb-14 mt-8 text-black">WE PROMISE WE COMFORT</h2>
-
-        
+      <div className="mx-auto text-center px-10 mt-[50rem] py-24 ">
+        <h2 className="text-4xl font-bold mb-14  text-black">WE PROMISE WE COMFORT</h2>
+  
         <br />
 
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-0">
@@ -145,7 +144,7 @@ const Home = () => {
               <img
                 src={home4}
                 alt="Description"
-                className="object-cover w-full h-full md:w-[770px] md:h-[500px]"
+                className="object-cover w-full h-full md:w-[1050px] md:h-[500px]"
               />
             </div>
 
