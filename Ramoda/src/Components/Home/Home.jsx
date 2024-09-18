@@ -24,9 +24,6 @@ import 'swiper/swiper-bundle.css'; // Ensure Swiper CSS is imported
 
 
 
-
-
-
 const Home = () => {
   const { addToCart } = useContext(CartContext);
   const [selectedSize, setSelectedSize] = useState({});
@@ -61,11 +58,9 @@ const Home = () => {
   };
 
 
-
   if (loading) {
     return <LoaderComp />; // Show loader when loading
   }
-
 
 
   return (
@@ -266,7 +261,6 @@ const Home = () => {
             </div>
           </section>
         
-
       </div> 
 
           <div className="text-center mt-48 mb-48">
