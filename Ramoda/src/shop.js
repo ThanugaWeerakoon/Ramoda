@@ -44,6 +44,7 @@ import D2 from './assets/dress/2.jpg';
 import D3 from './assets/dress/3.jpg';
 import D4 from './assets/dress/4.jpg';
 import D5 from './assets/dress/5.jpg';
+import D6 from './assets/dress/6.jpg';
 
 
 const products = [
