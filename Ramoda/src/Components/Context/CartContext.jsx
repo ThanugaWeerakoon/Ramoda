@@ -7,6 +7,7 @@ const CartContext = createContext();
 const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [checkoutItems, setCheckoutItems] = useState([]);
+  
 
   const addToCart = (productId, size) => {
     const productToAdd = productsData.find((product) => product.id === productId);

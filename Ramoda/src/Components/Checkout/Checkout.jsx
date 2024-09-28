@@ -29,10 +29,10 @@ const Checkout = () => {
   };
 
   const handleProceedClick = () => {
-    // Validate form data before sending the email
+    
     if (!formData.firstName || !formData.lastName || !formData.address || !formData.city || !formData.postalCode || !formData.phone) {
       alert("Please fill in all the required fields.");
-      return; // Stop the process if validation fails
+      return; 
     }
 
     // If validation passes, proceed to send the email
@@ -50,10 +50,10 @@ const Checkout = () => {
     };
   
     emailjs.send(
-      'service_lhpy25o',  // Your service ID
-      'template_nvy070d', // Your template ID
+      'service_lhpy25o',  //service ID
+      'template_nvy070d', //template ID
       templateParams,
-      'h5nv_sQcrzoOJ8ngD'  // Your public key
+      'h5nv_sQcrzoOJ8ngD'  //public key
     )
     .then((response) => {
       console.log('Email sent successfully!', response.status, response.text);
