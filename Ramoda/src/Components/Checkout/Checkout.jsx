@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
 import { CartContext } from '../Context/CartContext';
@@ -18,7 +18,19 @@ const Checkout = () => {
     billingAddress: '',
   });
 
+  const [totalPrice, setTotalPrice] = useState(0); // State to hold the total price
+
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Calculate total price whenever the cartItems change
+    const total = cartItems.reduce((total, item) => {
+      // Ensure item.price is treated as a number
+      return total + (typeof item.price === 'string' ? parseFloat(item.price.replace('LKR', '')) : item.price);
+    }, 0);
+    setTotalPrice(total);
+  }, [cartItems]);
+  
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -35,7 +47,7 @@ const Checkout = () => {
       return; 
     }
 
-    // If validation passes, proceed to send the email
+    // Send the email with order details
     const templateParams = {
       firstName: formData.firstName,
       lastName: formData.lastName,
@@ -46,7 +58,7 @@ const Checkout = () => {
       phone: formData.phone,
       billingAddress: isDifferentBillingAddress ? formData.billingAddress : 'Same as delivery address',
       cartItems: cartItems.map((item) => `${item.name} (Size: ${item.size}) - Rs ${item.price}`).join(', '),
-      totalPrice: cartItems.reduce((total, item) => total + item.price, 0),
+      totalPrice, // Include total price in the email
     };
   
     emailjs.send(
@@ -95,8 +107,9 @@ const Checkout = () => {
                 <div className="flex justify-between items-center mt-4 pt-4 border-t border-gray-600">
                   <span className="text-lg font-semibold">Total:</span>
                   <span className="text-lg font-semibold">
-                    Rs {cartItems.reduce((total, item) => total + item.price, 0)}
+                   LKR {totalPrice} 
                   </span>
+
                 </div>
               </div>
             )}
