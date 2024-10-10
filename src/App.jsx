@@ -5,7 +5,7 @@ import Home from './Components/Home/Home';
 import Cart from './Components/Cart/Cart';
 import Shop from './Components/Shop/Shop';
 import Men from './Components/Men/Men';
-import Contact from './Components/Contact/Contact';
+
 import Women from './Components/Women/Women';
 import Checkout from './Components/Checkout/Checkout';
 import Dress from './Components/Dress/Dress';
