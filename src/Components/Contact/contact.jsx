@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../../Components/Footer/Footer';
+import Footer from '../Footer/Footer';
 
 const Contact = () => {
   return (
