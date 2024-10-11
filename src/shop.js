@@ -1,3 +1,15 @@
+import product1 from './assets/products/Biege.jpg';
+import product2 from './assets/products/Black.jpg';
+import product3 from './assets/products/Blue.jpg';
+import product4 from './assets/products/Red.jpg';
+import product5 from './assets/products/SandStone.jpg';
+import product6 from './assets/products/White.jpg';
+import product7 from './assets/products/Hotpink.jpg';
+import product8 from './assets/products/Lightpink.jpg';
+import product9 from './assets/products/Purple.jpg';
+import product10 from './assets/products/OceanBlue.jpg';
+import product11 from './assets/products/1.jpg';
+import product12 from './assets/products/2.jpg';
 
 import latest1 from './assets/latest/OceanBlue.jpg';
 import latest2 from './assets/latest/Hotpink.jpg';
@@ -52,7 +64,21 @@ const products = [
   { id: 107, name: 'Sand Stone', price: '2150', image: latest7, isLatest: true },
   { id: 108, name: 'Red', price: '2150', image: latest8, isLatest: true },
   
- 
+  // Regular products
+  { id: 1, name: 'Product 1', price: '2150', image: product1, isLatest: false },
+  { id: 2, name: 'Product 2', price: '2150', image: product2, isLatest: false },
+  { id: 3, name: 'Product 3', price: '2150', image: product3, isLatest: false },
+  { id: 4, name: 'Product 4', price: '2150', image: product4, isLatest: false },
+  { id: 5, name: 'Product 5', price: '2150', image: product5, isLatest: false },
+  { id: 6, name: 'Product 6', price: '2150', image: product6, isLatest: false },
+  { id: 7, name: 'Product 7', price: '2150', image: product7, isLatest: false },
+  { id: 8, name: 'Product 8', price: '2150', image: product8, isLatest: false },
+  { id: 9, name: 'Product 9', price: '2150', image: product9, isLatest: false },
+  { id: 10, name: 'Product 10', price: '2150', image: product10, isLatest: false },
+  { id: 11, name: 'Product 11', price: '2150', image: product11, isLatest: false },
+  { id: 12, name: 'Product 12', price: '2150', image: product12, isLatest: false },
+
+  
   //Men Products
 
   { id: 31, name: 'Biege', price: '2150', image: M1, isMen: true },
