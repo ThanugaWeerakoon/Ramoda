@@ -30,14 +30,14 @@ import M7 from './assets/men/m7.jpg';
 import M8 from './assets/men/m8.jpg';
 
 
-import W1 from './assets/women/Biege.jpg';
-import W2 from './assets/women/Black.jpg';
-import W3 from './assets/women/Blue.jpg';
-import W4 from './assets/women/Hotpink.jpg';
-import W5 from './assets/women/Lightpink.jpg';
-import W6 from './assets/women/OceanBlue.jpg';
-import W7 from './assets/women/Purple.jpg';
-import W8 from './assets/women/Red.jpg';
+import Biege from './assets/women/Biege.jpg';
+import Black from './assets/women/Black.jpg';
+import Blue from './assets/women/Blue.jpg';
+import Hotpink from './assets/women/Hotpink.jpg';
+import Lightpink from './assets/women/Lightpink.jpg';
+import Oceanblue from './assets/women/OceanBlue.jpg';
+import Purple from './assets/women/Purple.jpg';
+import Red from './assets/women/Red.jpg';
 
 import D1 from './assets/dress/1.jpg';
 import D2 from './assets/dress/2.jpg';
@@ -87,14 +87,14 @@ const products = [
 
   //WoMen Products
 
-  { id: 21, name: 'W1', price: '2150', image: W1, isWomen: true },
-  { id: 22, name: 'W2', price: '2150', image: W2, isWomen: true },
-  { id: 23, name: 'W3', price: '2150', image: W3, isWomen: true },
-  { id: 24, name: 'W4', price: '2150', image: W4, isWomen: true },
-  { id: 25, name: 'W5', price: '2150', image: W5, isWomen: true },
-  { id: 26, name: 'W6', price: '2150', image: W6, isWomen: true },
-  { id: 27, name: 'W7', price: '2150', image: W7, isWomen: true },
-  { id: 28, name: 'W8', price: '2150', image: W8, isWomen: true },
+  { id: 21, name: 'Biege', price: '2150', image:Biege, isWomen: true },
+  { id: 22, name: 'Black', price: '2150', image:Black, isWomen: true },
+  { id: 23, name: 'Blue', price: '2150', image:Blue, isWomen: true },
+  { id: 24, name: 'Hotpink', price: '2150', image:Hotpink, isWomen: true },
+  { id: 25, name: 'Lightpink', price: '2150', image:Lightpink, isWomen: true },
+  { id: 26, name: 'Oceanblue', price: '2150', image:Oceanblue, isWomen: true },
+  { id: 27, name: 'Purple', price: '2150', image:Purple, isWomen: true },
+  { id: 28, name: 'Red', price: '2150', image:Red, isWomen: true },
 
 
   
