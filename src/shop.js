@@ -20,14 +20,16 @@ import latest6 from './assets/latest/Product6.jpg';
 import latest7 from './assets/latest/Product7.jpg';
 import latest8 from './assets/latest/Product8.jpg';
 
-import M1 from './assets/men/m1.jpg';
-import M2 from './assets/men/m2.jpg';
-import M3 from './assets/men/m3.jpg';
-import M4 from './assets/men/m4.jpg';
-import M5 from './assets/men/m5.jpg';
-import M6 from './assets/men/m6.jpg';
-import M7 from './assets/men/m7.jpg';
-import M8 from './assets/men/m8.jpg';
+import M1 from './assets/men/Biege.jpg';
+import M2 from './assets/men/Black.jpg';
+import M3 from './assets/men/Blue.jpg';
+import M4 from './assets/men/Hotpink.jpg';
+import M5 from './assets/men/Lightpink.jpg';
+import M6 from './assets/men/OceanBlue.jpg';
+import M7 from './assets/men/Purple.jpg';
+import M8 from './assets/men/Red.jpg';
+import M9 from './assets/men/SandStone.jpg';
+import M10 from './assets/men/White.jpg';
 
 
 import Biege from './assets/women/Biege.jpg';
@@ -79,14 +81,16 @@ const products = [
   
   //Men Products
 
-  { id: 31, name: 'M1', price: '2150', image: M1, isMen: true },
-  { id: 32, name: 'M2', price: '2150', image: M2, isMen: true },
-  { id: 33, name: 'M3', price: '2150', image: M3, isMen: true },
-  { id: 34, name: 'M4', price: '2150', image: M4, isMen: true },
-  { id: 35, name: 'M5', price: '2150', image: M5, isMen: true },
-  { id: 36, name: 'M6', price: '2150', image: M6, isMen: true },
-  { id: 37, name: 'M7', price: '2150', image: M7, isMen: true },
-  { id: 38, name: 'M8', price: '2150', image: M8, isMen: true },
+  { id: 31, name: 'Biege', price: '2150', image: M1, isMen: true },
+  { id: 32, name: 'Black', price: '2150', image: M2, isMen: true },
+  { id: 33, name: 'Blue', price: '2150', image: M3, isMen: true },
+  { id: 34, name: 'Hotpink', price: '2150', image: M4, isMen: true },
+  { id: 35, name: 'Lightpink', price: '2150', image: M5, isMen: true },
+  { id: 36, name: 'OceanBlue', price: '2150', image: M6, isMen: true },
+  { id: 37, name: 'Purple', price: '2150', image: M7, isMen: true },
+  { id: 38, name: 'Red', price: '2150', image: M8, isMen: true },
+  { id: 39, name: 'SandStone', price: '2150', image: M9, isMen: true },
+  { id: 40, name: 'White', price: '2150', image: M10, isMen: true },
 
 
   //WoMen Products
