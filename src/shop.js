@@ -38,6 +38,10 @@ import Lightpink from './assets/women/Lightpink.jpg';
 import Oceanblue from './assets/women/OceanBlue.jpg';
 import Purple from './assets/women/Purple.jpg';
 import Red from './assets/women/Red.jpg';
+import SandStone from './assets/women/SandStone.jpg';
+import White from './assets/women/White.jpg';
+
+
 
 import D1 from './assets/dress/1.jpg';
 import D2 from './assets/dress/2.jpg';
@@ -95,6 +99,8 @@ const products = [
   { id: 26, name: 'Oceanblue', price: '2150', image:Oceanblue, isWomen: true },
   { id: 27, name: 'Purple', price: '2150', image:Purple, isWomen: true },
   { id: 28, name: 'Red', price: '2150', image:Red, isWomen: true },
+  { id: 29, name: 'SandStone', price: '2150', image:SandStone, isWomen: true },
+  { id: 30, name: 'White', price: '2150', image:White, isWomen: true },
 
 
   

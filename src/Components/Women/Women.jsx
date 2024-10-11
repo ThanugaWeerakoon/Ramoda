@@ -65,7 +65,7 @@ return (
           </div>
           <div className="p-6 flex flex-col flex-grow items-center text-center">
             <h3 className="text-2xl font-semibold mb-2 text-black">{product.name}</h3>
-            <p className="text-gray-700 mb-4">{product.price}</p>
+            <p className="text-gray-700 mb-4">LKR {product.price}</p>
             <div className="mb-4">
               <label className="block text-sm font-medium mb-2">Size</label>
               <div className="flex space-x-2 justify-center">
