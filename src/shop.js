@@ -30,14 +30,14 @@ import M7 from './assets/men/m7.jpg';
 import M8 from './assets/men/m8.jpg';
 
 
-import W1 from './assets/women/1.jpg';
-import W2 from './assets/women/2.jpg';
-import W3 from './assets/women/3.jpg';
-import W4 from './assets/women/4.jpg';
-import W5 from './assets/women/5.jpg';
-import W6 from './assets/women/6.jpg';
-import W7 from './assets/women/7.jpg';
-import W8 from './assets/women/8.jpg';
+import W1 from './assets/women/Biege.jpg';
+import W2 from './assets/women/Black.jpg';
+import W3 from './assets/women/Blue.jpg';
+import W4 from './assets/women/Hotpink.jpg';
+import W5 from './assets/women/Lightpink.jpg';
+import W6 from './assets/women/OceanBlue.jpg';
+import W7 from './assets/women/Purple.jpg';
+import W8 from './assets/women/Red.jpg';
 
 import D1 from './assets/dress/1.jpg';
 import D2 from './assets/dress/2.jpg';
