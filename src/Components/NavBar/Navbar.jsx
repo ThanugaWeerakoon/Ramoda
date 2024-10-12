@@ -34,9 +34,9 @@ const Navbar = () => {
             <li className="relative">
               <Link
                 to="/"
-                className=" text-white transition duration-300 ease-in-out hover:text-gray-500"
+                className=" text-white font-bold transition duration-300 ease-in-out hover:text-gray-500"
               >
-                Home
+                HOME
               </Link>
             </li>
            
@@ -45,8 +45,8 @@ const Navbar = () => {
               onMouseEnter={toggleDropdown}
               onMouseLeave={closeDropdown}
             >
-              <span className="text-white transition duration-300 ease-in-out hover:text-gray-500 cursor-pointer">
-                Categories
+              <span className="text-white font-bold transition duration-300 ease-in-out hover:text-gray-500 cursor-pointer">
+                CATEGORIES
               </span>
               {isDropdownOpen && (
 
@@ -74,9 +74,9 @@ const Navbar = () => {
             <li className="relative">
               <Link
                 to="/contact"
-                className=" text-white transition duration-300 ease-in-out hover:text-gray-500 cursor-pointer"
+                className=" text-white font-bold transition duration-300 ease-in-out hover:text-gray-500 cursor-pointer"
               >
-                Contact
+                CONTACT
               </Link>
             </li>
           </ul>

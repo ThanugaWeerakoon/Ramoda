@@ -6,9 +6,8 @@ import home from '../../assets/Home.jpg';
 import home2 from '../../assets/Home2.jpg'; // Added for PhotoContainer
 import home3 from '../../assets/Home3.jpg';
 import home4 from '../../assets/Home4.jpg';
-import home5 from '../../assets/Home5.png';
-import home6 from '../../assets/Home6.png'
-import home7 from '../../assets/Home7.png'
+import up1 from '../../assets/1.jpg';
+
 import slide1 from '../../assets/Slide1.jpg';
 import slide2 from '../../assets/Slide2.jpg';
 import slide3 from '../../assets/Slide3.jpg';
@@ -126,7 +125,7 @@ const Home = () => {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-100 object-cover transform transition-transform duration-300 hover:scale-105"
+                    className="transform transition-transform duration-300 hover:scale-105"
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-grow items-center text-center">
@@ -218,56 +217,45 @@ const Home = () => {
           </section> 
 
 
-          <section>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-[9rem]">
-              {visibleProducts.map((product) => (
-                <div
-                  key={product.id}
-                  className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-100 object-cover transform transition-transform duration-300 hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col flex-grow items-center text-center">
-                    <h3 className="text-2xl font-semibold mb-2 text-black">{product.name}</h3>
-                    <p className="text-gray-700 mb-4">{product.price}</p>
-                    <div className="mb-4">
-                      <label className="block text-sm font-medium mb-2">Size</label>
-                      <div className="flex space-x-2 justify-center">
-                        {['S', 'M', 'L', 'XL'].map((size) => (
-                          <button
-                            key={size}
-                            type="button"
-                            className={`px-4 py-2 rounded-full border ${
-                              selectedSize[product.id] === size
-                                ? 'bg-black text-white'
-                                : 'bg-white text-black border-gray-300'
-                            } hover:bg-black hover:text-white transition duration-300`}
-                            onClick={() => handleSizeChange(product.id, size)}
-                          >
-                            {size}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                    <button
-                      onClick={() => handleAddToCart(product.id)}
-                      className="bg-black text-white py-2 px-6 w-full max-w-[200px] rounded-full hover:bg-white hover:text-black transition duration-300 ease-in-out mt-auto"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        
+          <section className="flex justify-center items-center py-24 bg-gray-100">
+  <div className="w-full max-w-screen-lg mx-auto text-center">
+    <h2 className="text-4xl font-bold text-black mb-12">Upcoming Drops</h2>
+    
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      {/* Dress 1 */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src={up1} alt="Upcoming Dress 1"/>
+        <div className="p-4">
+          <h3 className="text-2xl font-semibold mb-2 text-black">Elegant Evening Gown</h3>
+          <p className="text-gray-700 mb-4">Available soon - Stay tuned for the launch!</p>
+        </div>
+      </div>
+
+      {/* Dress 2 */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src={up1} alt="Upcoming Dress 2" />
+        <div className="p-4">
+          <h3 className="text-2xl font-semibold mb-2 text-black">Chic Casual Dress</h3>
+          <p className="text-gray-700 mb-4">Get ready for our new arrivals this season!</p>
+        </div>
+      </div>
+
+      {/* Dress 3 */}
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src={up1} alt="Upcoming Dress 3" />
+        <div className="p-4">
+          <h3 className="text-2xl font-semibold mb-2 text-black">Summer Floral Dress</h3>
+          <p className="text-gray-700 mb-4">Perfect for summer days, coming soon!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
       </div> 
 
-          <div className="text-center mt-48 mb-48">
+          <div className="text-center mt-16 mb-16">
             <h1 className="text-3xl font-bold">RA-MÓDA</h1>
             <p>MODERN FASHION FROM US TO YOU</p>
           </div>
