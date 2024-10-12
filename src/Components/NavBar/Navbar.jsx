@@ -39,14 +39,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li className="relative">
-              <Link
-                to="/shop"
-                className=" text-white transition duration-300 ease-in-out hover:text-gray-500"
-              >
-                Shop
-              </Link>
-            </li>
+           
             <li
               className="relative"
               onMouseEnter={toggleDropdown}
