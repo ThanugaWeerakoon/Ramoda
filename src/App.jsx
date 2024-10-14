@@ -7,7 +7,7 @@ import Men from './Components/Men/Men';
 import Women from './Components/Women/Women';
 import Checkout from './Components/Checkout/Checkout';
 import Dress from './Components/Dress/Dress';
-import Contact from './Components/Contact/Contact';
+import ContactUs from './Components/ContactUs/ContactUs';
 import { CartProvider } from './Components/Context/CartContext';
 
 
@@ -22,8 +22,7 @@ function App() {
              <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/contact" element={<Contact />} />
-             
+              <Route path="/contact" element={<ContactUs />} />         
                  
                  <Route path="/men" element={<Men />} />
                  <Route path="/women" element={<Women />} />
