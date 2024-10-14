@@ -2,13 +2,14 @@ import React, { useState, useContext, useEffect } from 'react';
 import { CartContext } from '../Context/CartContext';
 import productsData from '../../shop'; 
 import c130 from '../../assets/C0133.mp4';
-import home from '../../assets/Home.jpg'; 
-import home2 from '../../assets/Home2.jpg'; // Added for PhotoContainer
-import home3 from '../../assets/Home3.jpg';
+ 
+import home2 from '../../assets/Home2.jpg';
+
 import home4 from '../../assets/Home4.jpg';
-import up1 from '../../assets/1.jpg';
-import up2 from '../../assets/2.jpg';
-import up3 from '../../assets/3.jpg';
+
+import drop1 from '../../assets/Drop1.mp4';
+import drop2 from '../../assets/Drop2.mp4';
+import drop3 from '../../assets/Drop3.mp4';
 
 
 import slide1 from '../../assets/Slide1.jpg';
@@ -227,7 +228,7 @@ const Home = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
       {/* Dress 1 */}
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src={up1} alt="Upcoming Dress 1"/>
+        <video src={drop1} autoPlay loop muted className="w-full h-auto object-cover"></video>
         <div className="p-4">
           <h3 className="text-2xl font-semibold mb-2 text-black">Elegant Evening Gown</h3>
           <p className="text-gray-700 mb-4">Available soon - Stay tuned for the launch!</p>
@@ -236,7 +237,7 @@ const Home = () => {
 
       {/* Dress 2 */}
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src={up2} alt="Upcoming Dress 2" />
+        <video src={drop2} autoPlay loop muted className="w-full h-auto object-cover"></video>
         <div className="p-4">
           <h3 className="text-2xl font-semibold mb-2 text-black">Chic Casual Dress</h3>
           <p className="text-gray-700 mb-4">Get ready for our new arrivals this season!</p>
@@ -245,7 +246,7 @@ const Home = () => {
 
       {/* Dress 3 */}
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src={up3} alt="Upcoming Dress 3" />
+        <video src={drop3} autoPlay loop muted className="w-full h-auto object-cover"></video>
         <div className="p-4">
           <h3 className="text-2xl font-semibold mb-2 text-black">Summer Floral Dress</h3>
           <p className="text-gray-700 mb-4">Perfect for summer days, coming soon!</p>
@@ -254,6 +255,7 @@ const Home = () => {
     </div>
   </div>
 </section>
+
 
 
       </div> 
