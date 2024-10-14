@@ -85,11 +85,11 @@ const products = [
   
   //Dresses Products
 
-  { id: 111, name: 'D1', price: '2150', image: D1, isDress: true },
-  { id: 222, name: 'D2', price: '2150', image: D2, isDress: true },
-  { id: 333, name: 'D3', price: '2150', image: D3, isDress: true },
-  { id: 444, name: 'D4', price: '2150', image: D4, isDress: true },
-  { id: 555, name: 'D5', price: '2150', image: D5, isDress: true },
+  { id: 111, name: 'D1', price: '3500', image: D1, isDress: true },
+  { id: 222, name: 'D2', price: '3500', image: D2, isDress: true },
+  { id: 333, name: 'D3', price: '3500', image: D3, isDress: true },
+  { id: 444, name: 'D4', price: '3500', image: D4, isDress: true },
+  { id: 555, name: 'D5', price: '3500', image: D5, isDress: true },
 
 
 ];

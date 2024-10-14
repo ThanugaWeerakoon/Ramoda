@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from '../../Components/Footer/Footer';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +25,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-gray-100 text-gray-900">
+    <div className="min-h-screen flex flex-col justify-between bg-gray-100 text-gray-900 mt-20">
       <div className="container mx-auto py-12 px-6 lg:px-24">
         <h1 className="text-4xl font-bold text-center mb-8">Contact RA-MODA</h1>
 
@@ -92,10 +93,10 @@ const Contact = () => {
         </div>
       </div>
 
-      <footer className="bg-gray-800 text-white py-6 text-center">
-        <p>&copy; 2024 RA-MODA. All Rights Reserved.</p>
-      </footer>
+      <Footer/>
     </div>
+
+   
   );
 };
 

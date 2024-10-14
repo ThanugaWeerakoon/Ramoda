@@ -7,6 +7,9 @@ import home2 from '../../assets/Home2.jpg'; // Added for PhotoContainer
 import home3 from '../../assets/Home3.jpg';
 import home4 from '../../assets/Home4.jpg';
 import up1 from '../../assets/1.jpg';
+import up2 from '../../assets/2.jpg';
+import up3 from '../../assets/3.jpg';
+
 
 import slide1 from '../../assets/Slide1.jpg';
 import slide2 from '../../assets/Slide2.jpg';
@@ -233,7 +236,7 @@ const Home = () => {
 
       {/* Dress 2 */}
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src={up1} alt="Upcoming Dress 2" />
+        <img src={up2} alt="Upcoming Dress 2" />
         <div className="p-4">
           <h3 className="text-2xl font-semibold mb-2 text-black">Chic Casual Dress</h3>
           <p className="text-gray-700 mb-4">Get ready for our new arrivals this season!</p>
@@ -242,7 +245,7 @@ const Home = () => {
 
       {/* Dress 3 */}
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src={up1} alt="Upcoming Dress 3" />
+        <img src={up3} alt="Upcoming Dress 3" />
         <div className="p-4">
           <h3 className="text-2xl font-semibold mb-2 text-black">Summer Floral Dress</h3>
           <p className="text-gray-700 mb-4">Perfect for summer days, coming soon!</p>
