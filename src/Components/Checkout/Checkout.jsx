@@ -19,13 +19,12 @@ const Checkout = () => {
   });
 
   const [totalPrice, setTotalPrice] = useState(0); // State to hold the total price
-
+  const [paymentMethod, setPaymentMethod] = useState('KOKO'); // State for selected payment method
   const navigate = useNavigate();
 
   useEffect(() => {
     // Calculate total price whenever the cartItems change
     const total = cartItems.reduce((total, item) => {
-      // Ensure item.price is treated as a number
       return total + (typeof item.price === 'string' ? parseFloat(item.price.replace('LKR', '')) : item.price);
     }, 0);
     setTotalPrice(total);
@@ -40,8 +39,11 @@ const Checkout = () => {
     });
   };
 
+  const handlePaymentMethodChange = (e) => {
+    setPaymentMethod(e.target.value); // Update payment method based on user selection
+  };
+
   const handleProceedClick = () => {
-    
     if (!formData.firstName || !formData.lastName || !formData.address || !formData.city || !formData.postalCode || !formData.phone) {
       alert("Please fill in all the required fields.");
       return; 
@@ -59,6 +61,7 @@ const Checkout = () => {
       billingAddress: isDifferentBillingAddress ? formData.billingAddress : 'Same as delivery address',
       cartItems: cartItems.map((item) => `${item.name} (Size: ${item.size}) - Rs ${item.price}`).join(', '),
       totalPrice, // Include total price in the email
+      paymentMethod, // Include payment method in the email
     };
   
     emailjs.send(
@@ -81,10 +84,11 @@ const Checkout = () => {
     <div className="min-h-screen flex flex-col justify-between bg-[#212121] text-white">
       <div className="flex-grow py-40 px-6 lg:px-24">
         <header className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">Checkout Here</h1>
+          <h1 className="text-3xl font-bold text-center">Checkout Here</h1>
+
         </header>
 
-        <div className="lg:max-w-[800px] mx-auto">
+        <div className="lg:max-w-[900px] mx-auto">
           {/* Cart Items Section */}
           <section className="mb-8">
             <h2 className="text-xl font-semibold mb-4">Your Cart Items</h2>
@@ -109,7 +113,6 @@ const Checkout = () => {
                   <span className="text-lg font-semibold">
                    LKR {totalPrice} 
                   </span>
-
                 </div>
               </div>
             )}
@@ -183,16 +186,40 @@ const Checkout = () => {
             />
           </section>
 
-          <button onClick={handleProceedClick} className="bg-yellow-500 text-white w-full p-3 rounded-[10px]  hover:bg-yellow-400">
-            Proceed
-          </button>
+          {/* Payment Method Section */}
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold mb-4">Payment Method</h2>
+            <div className="w-full p-3 bg-[#3d3d3d] text-white border border-none rounded-[10px]">
+              <label className="flex items-center space-x-2 mb-4">
+                <input
+                  type="radio"
+                  name="paymentMethod"
+                  value="KOKO"
+                  checked={paymentMethod === 'KOKO'}
+                  onChange={handlePaymentMethodChange}
+                  className="mr-2"
+                />
+                <span>KOKO</span>
+              </label>
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="paymentMethod"
+                  value="Card Payment"
+                  checked={paymentMethod === 'Card Payment'}
+                  onChange={handlePaymentMethodChange}
+                  className="mr-2"
+                />
+                <span>Card Payment</span>
+              </label>
+            </div>
+          </section>
 
+          <button onClick={handleProceedClick} className="w-full py-3 bg-yellow-500 hover:bg-yellow-700 text-white font-semibold rounded-[10px]">Proceed</button>
         </div>
       </div>
 
-      <div className="bg-[#3d3d3d] py-6">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };

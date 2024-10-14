@@ -171,7 +171,7 @@ const Home = () => {
               </div>
 
               {/* Right Column for the Image Slider */}
-              <div className="relative flex justify-center items-center bg-gray-200">
+              <div className="relative flex justify-center items-center bg-gray-200 ">
                 <Swiper
                   spaceBetween={30}
                   slidesPerView={1}
