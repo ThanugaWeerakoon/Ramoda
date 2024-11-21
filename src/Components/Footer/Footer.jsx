@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Link } from 'react-router-dom';  // Import Link for navigation
 
 const Footer = () => {
   return (
@@ -25,6 +25,16 @@ const Footer = () => {
             <li><a href="#" className="hover:underline">Accessories</a></li>
           </ul>
         </div>
+
+        <div className="w-48 mb-6">
+          <h3 className="text-lg font-semibold mb-4">POLICIES</h3>
+          <ul className="space-y-2">
+            <li><Link to="/refund-policy" className="hover:underline">Refund Policy</Link></li>
+            <li><Link to="/privacy-policy" className="hover:underline">Privacy Policy</Link></li>
+            <li><Link to="/terms-and-conditions" className="hover:underline">Terms & Conditions</Link></li>
+          </ul>
+        </div>
+
         <div className="w-full max-w-sm bg-black p-6 rounded-lg mb-6">
           <h3 className="text-lg font-semibold mb-4">Join Our Community</h3>
           <p className="mb-4">Be the first to know about new arrivals, sales, and promotions by subscribing to our newsletter today!</p>

@@ -9,6 +9,9 @@ import Checkout from './Components/Checkout/Checkout';
 import Dress from './Components/Dress/Dress';
 import ContactUs from './Components/ContactUs/ContactUs';
 import { CartProvider } from './Components/Context/CartContext';
+import RefundPolicy from './Components/Footer/RefundPolicy';
+import PrivacyPolicy from './Components/Footer/PrivacyPolicy';
+import TermsAndConditions from './Components/Footer/TermsAndConditions';
 
 
 
@@ -27,6 +30,9 @@ function App() {
                  <Route path="/women" element={<Women />} />
                  <Route path="/checkout" element={<Checkout />} />
                  <Route path="/dress" element={<Dress />} />
+                 <Route path="/refund-policy" element={<RefundPolicy />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
                  
             </Routes>
           </div>
