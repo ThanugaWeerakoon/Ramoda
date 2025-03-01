@@ -210,7 +210,7 @@ const Checkout = () => {
                   onChange={handlePaymentMethodChange}
                   className="mr-2"
                 />
-                <span>Card Payment</span>
+                <span>Bank Transfer</span>
               </label>
             </div>
           </section>
